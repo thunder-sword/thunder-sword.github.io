@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>3数据依赖的公理系统 | thunder_sword&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/img/128_favicon.ico">
+    <script>
+	  var _hmt = _hmt || [];
+	  (function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?ab724b1142aa47464561dc21c24761ad";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	  })();
+		</script>
+    <meta name="description" content="包括各种内容的个人博客，欢迎来玩：Linux,Shell,c++,python,java,sql,mysql,git,github，acm,ctf,学习笔记,学习,知识统计,C,Typora,Linux,Shell,c++,python,java,sql,mysql,git,github,markdown">
+    <meta name="keywords" content="网安博客,个人技术博客,网安,网络安全,计算机技术,acm,ctf,笔记,学习,知识统计,C,Typora,Linux,Shell,c++,python,java,sql,mysql,git,github,markdown">
+    <meta name="baidu-site-verification" content="code-osO2ZQEOYI">
+    <meta name="theme-color" content="#11a8cd">
+    <link rel="preload" href="/assets/css/0.styles.3aeb4c2d.css" as="style"><link rel="preload" href="/assets/js/app.b7083987.js" as="script"><link rel="preload" href="/assets/js/2.4f9a9df3.js" as="script"><link rel="preload" href="/assets/js/30.72462007.js" as="script"><link rel="prefetch" href="/assets/js/10.6c6b45ad.js"><link rel="prefetch" href="/assets/js/11.84608f89.js"><link rel="prefetch" href="/assets/js/12.dcf044b2.js"><link rel="prefetch" href="/assets/js/13.6965b7e3.js"><link rel="prefetch" href="/assets/js/14.67638ea4.js"><link rel="prefetch" href="/assets/js/15.5af15766.js"><link rel="prefetch" href="/assets/js/16.6b16c543.js"><link rel="prefetch" href="/assets/js/17.66bfe4c0.js"><link rel="prefetch" href="/assets/js/18.d78e699d.js"><link rel="prefetch" href="/assets/js/19.8d23a907.js"><link rel="prefetch" href="/assets/js/20.dac1dbe7.js"><link rel="prefetch" href="/assets/js/21.909ed316.js"><link rel="prefetch" href="/assets/js/22.11cc0683.js"><link rel="prefetch" href="/assets/js/23.19d5f0ce.js"><link rel="prefetch" href="/assets/js/24.9c6d3539.js"><link rel="prefetch" href="/assets/js/25.a99c7e85.js"><link rel="prefetch" href="/assets/js/26.ed0de198.js"><link rel="prefetch" href="/assets/js/27.e5695750.js"><link rel="prefetch" href="/assets/js/28.994692dc.js"><link rel="prefetch" href="/assets/js/29.addf2a69.js"><link rel="prefetch" href="/assets/js/3.916cf5ff.js"><link rel="prefetch" href="/assets/js/31.0eec664e.js"><link rel="prefetch" href="/assets/js/32.e434caf2.js"><link rel="prefetch" href="/assets/js/33.a6e6128d.js"><link rel="prefetch" href="/assets/js/34.3aa3e5e1.js"><link rel="prefetch" href="/assets/js/35.da4ca79a.js"><link rel="prefetch" href="/assets/js/36.2ab7c1a6.js"><link rel="prefetch" href="/assets/js/37.e1b8a52f.js"><link rel="prefetch" href="/assets/js/38.791339b9.js"><link rel="prefetch" href="/assets/js/39.2f015159.js"><link rel="prefetch" href="/assets/js/4.4fa39e91.js"><link rel="prefetch" href="/assets/js/40.a103b087.js"><link rel="prefetch" href="/assets/js/41.177c76e6.js"><link rel="prefetch" href="/assets/js/42.ada898e6.js"><link rel="prefetch" href="/assets/js/43.8a8ec67b.js"><link rel="prefetch" href="/assets/js/44.e458129c.js"><link rel="prefetch" href="/assets/js/45.867ed79a.js"><link rel="prefetch" href="/assets/js/46.76548327.js"><link rel="prefetch" href="/assets/js/47.120ef2ae.js"><link rel="prefetch" href="/assets/js/48.c5e34071.js"><link rel="prefetch" href="/assets/js/49.a051f600.js"><link rel="prefetch" href="/assets/js/5.5779f536.js"><link rel="prefetch" href="/assets/js/50.373389f0.js"><link rel="prefetch" href="/assets/js/51.f511b227.js"><link rel="prefetch" href="/assets/js/52.f891f9c9.js"><link rel="prefetch" href="/assets/js/53.39f95eba.js"><link rel="prefetch" href="/assets/js/54.01682846.js"><link rel="prefetch" href="/assets/js/55.71641d3a.js"><link rel="prefetch" href="/assets/js/56.0678b507.js"><link rel="prefetch" href="/assets/js/57.21853e21.js"><link rel="prefetch" href="/assets/js/58.296d0eb9.js"><link rel="prefetch" href="/assets/js/59.b217c7a6.js"><link rel="prefetch" href="/assets/js/6.39195afd.js"><link rel="prefetch" href="/assets/js/60.55eeef88.js"><link rel="prefetch" href="/assets/js/61.4905d5e7.js"><link rel="prefetch" href="/assets/js/62.4ba391d5.js"><link rel="prefetch" href="/assets/js/7.6da95a8d.js"><link rel="prefetch" href="/assets/js/8.7d6f2c49.js"><link rel="prefetch" href="/assets/js/9.234e0d3c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3aeb4c2d.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu have-body-img"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/ths-logo.png" alt="thunder_sword's blog" class="logo"> <span class="site-name can-hide">thunder_sword's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="http://ithundersword.gitee.io/blogimages/images/life/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  来看漫画丫~
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/categories/" class="nav-link">分类</a></div><div class="nav-item"><a href="/tags/" class="nav-link">标签</a></div><div class="nav-item"><a href="/archives/" class="nav-link">归档</a></div> <a href="https://github.com/thunder-sword/thunder-sword.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="/img/touxiang.jpg"> <div class="blogger-info"><h3>thunder-sword</h3> <span>网安界的小菜鸡</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="http://ithundersword.gitee.io/blogimages/images/life/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  来看漫画丫~
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/categories/" class="nav-link">分类</a></div><div class="nav-item"><a href="/tags/" class="nav-link">标签</a></div><div class="nav-item"><a href="/archives/" class="nav-link">归档</a></div> <a href="https://github.com/thunder-sword/thunder-sword.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>1数据库系统概述</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>2数据模型</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>3数据库系统结构</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>sql语法标准</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>关系数据库基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据库安全</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据库设计</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>设计与应用开发篇</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/097ea2/" class="sidebar-link">1-2关系规范化过程</a></li><li><a href="/pages/ca4bd1/" aria-current="page" class="active sidebar-link">3数据依赖的公理系统</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/ca4bd1/#_1-armstrong公理系统" class="sidebar-link">1.Armstrong公理系统</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/ca4bd1/#（1）定义：" class="sidebar-link">（1）定义：</a></li><li class="sidebar-sub-header"><a href="/pages/ca4bd1/#（2）推理规则：" class="sidebar-link">（2）推理规则：</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/ca4bd1/#_2-闭包" class="sidebar-link">2.闭包</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/ca4bd1/#（1）f的闭包" class="sidebar-link">（1）F的闭包</a></li><li class="sidebar-sub-header"><a href="/pages/ca4bd1/#（2）x关于函数依赖集f的闭包" class="sidebar-link">（2）X关于函数依赖集F的闭包</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/ca4bd1/#_3-闭包相关概念" class="sidebar-link">3.闭包相关概念</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/ca4bd1/#（1）覆盖" class="sidebar-link">（1）覆盖</a></li><li class="sidebar-sub-header"><a href="/pages/ca4bd1/#（2）最小覆盖（不唯一）" class="sidebar-link">（2）最小覆盖（不唯一）</a></li></ul></li></ul></li><li><a href="/pages/c541a8/" class="sidebar-link">4模式的分解</a></li></ul></section></li></ul> <div class="sidebar-slot sidebar-slot-bottom"><!-- 正方形 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="3508773082"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div></aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-1cd794fe><div class="articleInfo" data-v-1cd794fe><ul class="breadcrumbs" data-v-1cd794fe><li data-v-1cd794fe><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-1cd794fe></a></li> <li data-v-1cd794fe><a href="/categories/?category=%E6%95%B0%E6%8D%AE%E5%BA%93" title="分类" data-v-1cd794fe>数据库</a></li> <li data-v-1cd794fe><a href="/categories/?category=%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E7%AF%87" title="分类" data-v-1cd794fe>设计与应用开发篇</a></li> <!----></ul> <div class="info" data-v-1cd794fe><div title="作者" class="author iconfont icon-touxiang" data-v-1cd794fe><a href="https://github.com/thunder-sword" target="_blank" title="作者" class="beLink" data-v-1cd794fe>thunder-sword</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-1cd794fe><a href="javascript:;" data-v-1cd794fe>2021-06-13</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">
+          3数据依赖的公理系统
+        </h1> <div class="page-slot page-slot-top"><!-- 固定100% * 90px可显示，max-height:90px未见显示-->
+     <ins class="adsbygoogle"
+          style="display:inline-block;width:100%;max-height:90px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6625304284"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="theme-vdoing-content content__default"><h1 id="_0x0-总览"><a href="#_0x0-总览" class="header-anchor">#</a> 0x0.总览</h1> <p>总图：</p> <p><img src="https://gitee.com/ithundersword/BlogImages/raw/master/images/blog/PicGo/20210613200300.png" alt="image-20210428114721014"></p> <p><img src="https://gitee.com/ithundersword/BlogImages/raw/master/images/blog/PicGo/20210613200301.png" alt="image-20210508114105260"></p> <h1 id="_0x1-模式分解算法的理论基础"><a href="#_0x1-模式分解算法的理论基础" class="header-anchor">#</a> 0x1.模式分解算法的理论基础</h1> <ul><li>分解的根据：要保证分解后的一组关系能够继续携带完整的实际需求信息</li> <li>很多时候你都期望你的函数依赖集合能够以尽可能少的依赖数量描述出你的实际需求</li> <li>因为分解的时候你期望关注一个最少数量的函数依赖的集合，但是它必须能够反映所有需求</li></ul> <h1 id="_0x2-各个概念"><a href="#_0x2-各个概念" class="header-anchor">#</a> 0x2.各个概念</h1> <h2 id="_1-armstrong公理系统"><a href="#_1-armstrong公理系统" class="header-anchor">#</a> 1.Armstrong公理系统</h2> <h3 id="（1）定义："><a href="#（1）定义：" class="header-anchor">#</a> （1）定义：</h3> <p>对于满足一组函数依赖 F 的关系模式R &lt;U，F&gt;，其任何一个关系r，若函数依赖X→Y都成立, （即r中任意两元组t，s，若t[X］=s[X］，则t[Y］=s[Y］），则称F逻辑蕴含X →Y</p> <h3 id="（2）推理规则："><a href="#（2）推理规则：" class="header-anchor">#</a> （2）推理规则：</h3> <p>关系模式R &lt;U，F &gt;来说有以下的推理规则：</p> <ul><li><p>==自反律（Reflexivity）==：若Y 属于 X 属于 U，则X →Y为F所蕴含。</p> <p>证: 设Y 属于 X 属于 U
+对R &lt;U，F&gt; 的任一关系r中的任意两个元组t，s：
+若t[X]=s[X]，由于Y 属于 X，有t[y]=s[y]，
+所以X→Y成立，自反律得证</p></li> <li><p>==增广律（Augmentation）==：若X→Y为F所蕴含，且Z 属于U，则XZ→YZ为F所蕴含。</p> <p>证：设X→Y为F所蕴含，且Z 属于 U。
+设R&lt;U，F&gt; 的任一关系r中任意的两个元组t，s：
+若t[XZ]=s[XZ]，则有t[X]=s[X]和t[Z]=s[Z]；
+由X→Y，于是有t[Y]=s[Y]，所以t[YZ]=s[YZ]，所以
+XZ→YZ为F所蕴含，增广律得证。</p></li> <li><p>==传递律（Transitivity）==：若X→Y及Y→Z为F所蕴含，则X→Z为F所蕴含。</p> <p>证：设X→Y及Y→Z为F所蕴含。
+对R&lt;U，F&gt; 的任一关系 r中的任意两个元组 t，s：
+若t[X]=s[X]，由于X→Y，有 t[Y]=s[Y]；
+再由Y→Z，有t[Z]=s[Z]，所以X→Z为F所蕴含，传递
+律得证。</p></li> <li><p>根据A1，A2，A3这三条推理规则可以得到下面三条推理规则：</p></li> <li><p>==合并规则==：由X→Y，X→Z，有X→YZ。（A2， A3）</p></li> <li><p>==伪传递规则==：由X→Y，WY→Z，有XW→Z。（A2， A3）</p></li> <li><p>==分解规则==：由X→Y及 Z属于Y，有X→Z。（A1， A3）</p></li> <li><p>根据合并规则和分解规则，可得==引理6.1==：</p> <p>$X→A_1 A_2…A_k$成立的充分必要条件是X→A~i~成立（i=1，2，…，k）</p></li></ul> <h2 id="_2-闭包"><a href="#_2-闭包" class="header-anchor">#</a> 2.闭包</h2> <h3 id="（1）f的闭包"><a href="#（1）f的闭包" class="header-anchor">#</a> （1）F的闭包</h3> <p>在关系模式R&lt;U，F&gt;中为F所逻辑蕴含的函数依赖的全体叫作==F的闭包==，记为F^+^。</p> <p>例子：</p> <p><img src="https://gitee.com/ithundersword/BlogImages/raw/master/images/blog/PicGo/20210613200302.png" alt="image-20210428120247543"></p> <p>NP完全问题复杂度太高，因此又定义了X关于函数依赖集F的闭包。</p> <h3 id="（2）x关于函数依赖集f的闭包"><a href="#（2）x关于函数依赖集f的闭包" class="header-anchor">#</a> （2）X关于函数依赖集F的闭包</h3> <p>设F为属性集U上的一组函数依赖，X 属于U， $X_F^+$ ={ A|X→A能由F 根据Armstrong公理导出}， $X_F^+$称为属性集==X关于函数依赖集F的闭包==(即X所能决定的那些属性)</p> <h4 id="用途："><a href="#用途：" class="header-anchor">#</a> 用途：</h4> <p>​    将判定X→Y是否能由F根据Armstrong公理导出的问题，转化为求出XF+ 、判定Y是否为XF+的子集的问题
+​    （转化为数据库表中属性的依赖关系）</p> <h4 id="计算算法："><a href="#计算算法：" class="header-anchor">#</a> 计算算法：</h4> <p>算法6.1  求属性集X（X 属于 U）关于U上的函数依赖集F 的闭包XF+</p> <p>输入：X，F		输出：XF+
+步骤：
+（1）令X（0）=X，i=0
+（2）求B，这里B = { A |(∃ V)( ∃ W)(V→W∈F∧V 属于 X（i）∧A∈ W)}；
+（3）X（i+1）=B∪X（i）
+（4）判断X（i+1）= X （i）吗?
+（5）若相等或X（i）=U , 则X（i）就是XF+ , 算法终止。
+（6）若否，则 i=i+l，返回第（2）步。</p> <p>对于算法6.1， 令ai =|X（i）|，{ai }形成一个步长大于1的严格递增的序列，序列的上界是 | U |，因此该算法最多 |U| - |X| 次循环就
+会终止。</p> <h4 id="例子："><a href="#例子：" class="header-anchor">#</a> 例子：</h4> <p>[例6.1]  已知关系模式R&lt;U，F&gt;，其中
+U={A，B，C，D，E}；
+F={AB→C，B→D，C→E，EC→B，AC→B}。
+求（AB）F+ 。
+解  设X（0）=AB；
+(1) X（1）=AB∪CD=ABCD。</p> <p>(2) X（0）≠ X（1）
+X（2）=X（1）∪BE=ABCDE。
+(3) X（2）=U，算法终止
+（AB）F+ =ABCDE。</p> <h2 id="_3-闭包相关概念"><a href="#_3-闭包相关概念" class="header-anchor">#</a> 3.闭包相关概念</h2> <h3 id="（1）覆盖"><a href="#（1）覆盖" class="header-anchor">#</a> （1）覆盖</h3> <p>定义6.14  如果G+=F+，就说函数依赖集==F覆盖G==（F是G的覆盖，或G是F的覆盖），或F与G等价。</p> <p>引理6.3  F+ = G+ 的==充分必要条件==是F 属于 G+ ，和G 属于 F+
+证:  必要性显然，只证充分性。
+（1）若F属于G+ ，则XF+ 属于 XG++ 。
+（2）任取X→Y∈F+  则有 Y 属于 XF+  属于 XG++ 。
+所以X→Y ∈ (G+）+= G+。即F+ 属于 G+。
+（3）同理可证G+ 属于 F+ ，所以F+ = G+。</p> <h3 id="（2）最小覆盖（不唯一）"><a href="#（2）最小覆盖（不唯一）" class="header-anchor">#</a> （2）最小覆盖（不唯一）</h3> <h4 id="定义和限制："><a href="#定义和限制：" class="header-anchor">#</a> 定义和限制：</h4> <p>定义6.15  如果函数依赖集F满足下列条件，则称F为一个==极小函数依赖集==。亦称为==最小依赖集==或==最小覆盖==。
+(1) F中任一函数依赖的右部仅含有一个属性。
+(2) F中不存在这样的函数依赖X→A，使得F与F-{X→A}等价。  <strong>(没有多余的函数依赖)</strong>
+(3) F中不存在这样的函数依赖X→A， X有<strong>真子集</strong>Z使得F-{X→A}∪{Z→A}与F等价。 <strong>(决定因素里没有多余的属性)</strong></p> <p>目的：<strong>用最少的描述反应实际中事物间的关系从而便于分解</strong></p> <h4 id="定理6-3"><a href="#定理6-3" class="header-anchor">#</a> 定理6.3</h4> <p>每一个函数依赖集F均等价于一个极小函数依赖集Fm。此Fm称为F的最小依赖集。
+证明: 构造性证明，找出F的一个最小依赖集。</p> <h4 id="极小化过程："><a href="#极小化过程：" class="header-anchor">#</a> 极小化过程：</h4> <p>(1)逐一检查F中各函数依赖FDi：X→Y，若Y=A1A2 …Ak，k &gt; 2，
+则用 { X→Aj |j=1，2，…， k} 来取代X→Y。（分解右多项）</p> <p>(2)逐一检查F中各函数依赖FDi：X→A，令G=F-{X→A}，
+若A∈XG+， 则从F中去掉此函数依赖。（依次擦除，看是否能用其他代替）</p> <p>(3)逐一取出F中各函数依赖FDi：X→A，设X=B1B2…Bm，
+逐一考查Bi （i=l，2，…，m），若A ∈（X-Bi ）F+ ，
+则以X-Bi 取代X。（检查左多项，是否可以减少左多项数目）</p> <h4 id="例子：-2"><a href="#例子：-2" class="header-anchor">#</a> 例子：</h4> <p>[例6.2] 关系模式S&lt;U，F&gt;，其中：
+U={ Sno，Sdept，Mname，Cno，Grade }，
+F={ Sno→Sdept，Sdept→Mname，(Sno，Cno)→Grade }
+设F’={Sno→Sdept，Sno→Mname，Sdept→Mname，
+(Sno，Cno)→Grade，(Sno，Sdept)→Sdept}
+F是最小覆盖，而F’不是。
+因为：F ’ - {Sno→Mname}与F ’等价
+F ’ - {(Sno，Sdept)→Sdept}也与F ’等价</p> <p>[例6.13]   F = {A→B，B→A，B→C，A→C，C→A}
+Fm1、Fm2都是F的最小依赖集：
+Fm1= {A→B，B→C，C→A}
+Fm2= {A→B，B→A，A→C，C→A}
+F的最小依赖集Fm<strong>不唯一</strong>
+极小化过程( 定理6.3的证明 )也是检验F是否为极小依赖集的一个算法</p></div></div> <div class="page-slot page-slot-bottom"><!-- 横向自适应 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6620245489"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="page-edit"><!----> <!----> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/097ea2/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">1-2关系规范化过程</div></a> <a href="/pages/c541a8/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">4模式的分解</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/097ea2/" class="prev">1-2关系规范化过程</a></span> <span class="next"><a href="/pages/c541a8/">4模式的分解</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/1bb335/"><div>计算机系统的硬件结构</div></a> <span>10-12</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/daf4a8/"><div>计算机系统概论</div></a> <span>10-12</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/fadbf4/"><div>进程</div></a> <span>10-12</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:994020638@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/thunder-sword" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://music.163.com/#/playlist?id=755597173" title="听音乐" target="_blank" class="iconfont icon-erji"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2019-2021
+    <span>Evan Xu | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <div class="body-bg" style="background:url() center center / cover no-repeat;opacity:0.5;"></div> <!----> <div class="custom-html-window custom-html-window-rb" style="display:;"><div class="custom-wrapper"><i class="close-but">×</i> <div><!-- 固定160*160px -->
+      <ins class="adsbygoogle"
+          style="display:inline-block;max-width:160px;max-height:160px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="8377369658"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      </div></div></div></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.b7083987.js" defer></script><script src="/assets/js/2.4f9a9df3.js" defer></script><script src="/assets/js/30.72462007.js" defer></script>
+  </body>
+</html>
